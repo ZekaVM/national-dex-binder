@@ -1,0 +1,84 @@
+/* Basic reset and font */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #2F5597; /* Matching your ODS theme */
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+header h1 { font-size: 1.5rem; }
+#progress-container { font-weight: bold; font-size: 1.1rem; }
+
+/* Buttons */
+#controls { display: flex; gap: 0.5rem; }
+button, #import-btn {
+    background-color: #fff;
+    color: #2F5597;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover { background-color: #e0e0e0; }
+
+/* Table Styling */
+main { padding: 2rem; overflow-x: auto; }
+#pokedex-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+thead th {
+    background-color: #eef2f7;
+    position: sticky;
+    top: 0; /* Adjust if header height changes */
+    z-index: 10;
+}
+tbody tr:nth-child(even) { background-color: #f8f9fa; }
+tbody tr:hover { background-color: #eef2f7; }
+
+/* Sprite column */
+td img {
+    width: 40px;
+    height: 40px;
+    image-rendering: pixelated; /* Keeps pixel art sharp */
+}
+
+/* Checkbox styling */
+.have-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #2F5597;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    header { flex-direction: column; text-align: center; }
+    main { padding: 0.5rem; }
+    th, td { padding: 0.4rem; font-size: 0.85rem; }
+}
