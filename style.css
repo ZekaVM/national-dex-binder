@@ -11,7 +11,7 @@ body {
 header {
     position: sticky;
     top: 0;
-    background-color: #2F5597; /* Matching your ODS theme */
+    background-color: #2F5597;
     color: white;
     padding: 1rem 2rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -23,9 +23,19 @@ header {
     gap: 1rem;
 }
 header h1 { font-size: 1.5rem; }
-#progress-container { font-weight: bold; font-size: 1.1rem; }
 
-/* Buttons */
+/* Search Bar */
+#search-container input {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+    font-size: 1rem;
+}
+#search-container input:focus { outline: 2px solid #7ca0f0; }
+
+/* Progress and Buttons */
+#progress-container { font-weight: bold; font-size: 1.1rem; }
 #controls { display: flex; gap: 0.5rem; }
 button, #import-btn {
     background-color: #fff;
@@ -58,27 +68,58 @@ thead th {
     top: 0; /* Adjust if header height changes */
     z-index: 10;
 }
+
+/* Alternating row colors */
 tbody tr:nth-child(even) { background-color: #f8f9fa; }
 tbody tr:hover { background-color: #eef2f7; }
 
-/* Sprite column */
+/* Generation Separator Row */
+.gen-separator {
+    background-color: #808080 !important;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.gen-separator:hover { background-color: #808080 !important; }
+
+/* Sprite column (Bigger Sprites) */
 td img {
-    width: 40px;
-    height: 40px;
-    image-rendering: pixelated; /* Keeps pixel art sharp */
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+/* Missing Sprite Styling */
+.missing-sprite {
+    border: 2px dashed #cc0000;
+    background-color: #ffe6e6;
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
 }
 
 /* Checkbox styling */
 .have-checkbox {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
     accent-color: #2F5597;
 }
 
 /* Responsive tweaks */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     header { flex-direction: column; text-align: center; }
+    #search-container input { width: 100%; }
     main { padding: 0.5rem; }
     th, td { padding: 0.4rem; font-size: 0.85rem; }
+    td img { width: 50px; height: 50px; }
 }
