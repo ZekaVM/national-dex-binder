@@ -7,11 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Warning Banner for Missing Sprites -->
+    <div id="warning-banner" style="display: none;">
+        ⚠️ <strong>Warning:</strong> The following sprites could not be found locally: 
+        <span id="missing-list"></span>
+    </div>
+
     <header>
         <h1>National Pokédex Binder</h1>
         
-        <div id="search-container">
-            <input type="text" id="search-bar" placeholder="Search by name or dex #...">
+        <div id="filter-controls">
+            <input type="text" id="search-bar" placeholder="Search name or dex #...">
+            
+            <select id="gen-filter">
+                <option value="all">All Generations</option>
+                <option value="1">Gen 1</option>
+                <option value="2">Gen 2</option>
+                <option value="3">Gen 3</option>
+                <option value="4">Gen 4</option>
+                <option value="5">Gen 5</option>
+                <option value="6">Gen 6</option>
+                <option value="7">Gen 7</option>
+                <option value="8">Gen 8</option>
+                <option value="9">Gen 9</option>
+            </select>
+
+            <select id="status-filter">
+                <option value="all">All Cards</option>
+                <option value="collected">Collected Only</option>
+                <option value="missing">Missing Only</option>
+            </select>
+
+            <select id="sort-filter">
+                <option value="asc">Sort: Dex # (Asc)</option>
+                <option value="desc">Sort: Dex # (Desc)</option>
+            </select>
         </div>
 
         <div id="progress-container">
