@@ -7,6 +7,17 @@ body {
     line-height: 1.5;
 }
 
+/* Warning Banner */
+#warning-banner {
+    background-color: #fce8e6;
+    color: #c5221f;
+    padding: 10px 2rem;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #fad2cf;
+    text-align: center;
+}
+#missing-list { font-weight: bold; }
+
 /* Sticky Header */
 header {
     position: sticky;
@@ -24,15 +35,21 @@ header {
 }
 header h1 { font-size: 1.5rem; }
 
-/* Search Bar */
-#search-container input {
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    border: none;
-    width: 250px;
-    font-size: 1rem;
+/* Filter Controls */
+#filter-controls {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
-#search-container input:focus { outline: 2px solid #7ca0f0; }
+#filter-controls input, #filter-controls select {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.9rem;
+}
+#filter-controls input:focus, #filter-controls select:focus {
+    outline: 2px solid #7ca0f0;
+}
 
 /* Progress and Buttons */
 #progress-container { font-weight: bold; font-size: 1.1rem; }
@@ -65,13 +82,12 @@ th, td {
 thead th {
     background-color: #eef2f7;
     position: sticky;
-    top: 0; /* Adjust if header height changes */
+    top: 0;
     z-index: 10;
 }
 
-/* Alternating row colors */
-tbody tr:nth-child(even) { background-color: #f8f9fa; }
-tbody tr:hover { background-color: #eef2f7; }
+/* Removed alternating row colors so the slot gradient pops */
+tbody tr:hover { background-color: #f0f4f9; }
 
 /* Generation Separator Row */
 .gen-separator {
@@ -116,9 +132,9 @@ td img {
 }
 
 /* Responsive tweaks */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     header { flex-direction: column; text-align: center; }
-    #search-container input { width: 100%; }
+    #filter-controls { justify-content: center; }
     main { padding: 0.5rem; }
     th, td { padding: 0.4rem; font-size: 0.85rem; }
     td img { width: 50px; height: 50px; }
