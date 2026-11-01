@@ -46,12 +46,6 @@ const SPRITE_PATH = "sprites/{}.png";
 function generateData() {
     GENS.forEach((gen, gi) => {
         const genId = gi + 1;
-        
-        POKEMON_DATA.push({ 
-            isSeparator: true, 
-            gen: genId,
-            name: `GEN ${toRoman(genId)} - ${gen.name.split('(')[1].replace(')', '').toUpperCase()}` 
-        });
 
         if (slot > 1) { page++; slot = 1; }
 
@@ -87,6 +81,12 @@ function toRoman(num) {
     return roman[num - 1];
 }
 
+function getGenName(genId) {
+    const genObj = GENS[genId - 1];
+    const regionName = genObj.name.split('(')[1].replace(')', '').toUpperCase();
+    return `GEN ${toRoman(genId)} - ${regionName}`;
+}
+
 generateData();
 
 // ============================================================
@@ -103,19 +103,18 @@ const sortFilter = document.getElementById('sort-filter');
 
 const warningBanner = document.getElementById('warning-banner');
 const missingListDisplay = document.getElementById('missing-list');
-const missingSpritesSet = new Set(); // Track unique missing files
+const missingSpritesSet = new Set();
 
-// Slot Color Gradient (Green to Red based on position)
+// Slot Color Gradient (Green to Red)
 function getSlotColor(slot) {
     if (slot < 1 || slot > PER_PAGE) return 'transparent';
     const t = (slot - 1) / (PER_PAGE - 1);
-    const h = 120 * (1 - t); // 120 (Green) to 0 (Red)
+    const h = 120 * (1 - t);
     const s = 55 + 30 * t;
     const l = 82 - 30 * t;
     return `hsl(${h}, ${s}%, ${l}%)`;
 }
 
-// Global function to catch missing images
 window.handleMissingSprite = function(img, pkmnName) {
     img.onerror = null; 
     img.style.display = 'none'; 
@@ -125,12 +124,9 @@ window.handleMissingSprite = function(img, pkmnName) {
     placeholder.textContent = 'Missing';
     img.parentNode.appendChild(placeholder);
 
-    // Add to warning banner
     if (!missingSpritesSet.has(pkmnName)) {
         missingSpritesSet.add(pkmnName);
         warningBanner.style.display = 'block';
-        
-        // Update the list text
         const missingArray = Array.from(missingSpritesSet);
         if (missingArray.length > 10) {
             missingListDisplay.textContent = `${missingArray.slice(0, 10).join(', ')}... (and ${missingArray.length - 10} more)`;
@@ -146,25 +142,19 @@ function renderTable() {
     const selectedStatus = statusFilter.value;
     const sortOrder = sortFilter.value;
 
-    // 1. Process Data (Filter & Sort)
+    // 1. Filter Data
     let processedData = POKEMON_DATA.filter(pkmn => {
         // Gen Filter
         if (selectedGen !== 'all' && pkmn.gen !== parseInt(selectedGen)) return false;
 
-        if (pkmn.isSeparator) {
-            // Only show separators if we are looking at "All Generations"
-            // AND we aren't actively searching for something specific.
-            return selectedGen === 'all' && term === '' && selectedStatus === 'all';
-        }
-
         // Search Filter
         if (term) {
             const matchesName = pkmn.name.toLowerCase().includes(term);
-            const matchesDex = pkmn.dex.toString() === term || pkmn.dex.toString().includes(term);
+            const matchesDex = pkmn.dex.toString().includes(term);
             if (!matchesName && !matchesDex) return false;
         }
 
-        // Status Filter (Checkbox state)
+        // Status Filter
         if (selectedStatus !== 'all') {
             const uniqueKey = `pkmn_${pkmn.dex}_${pkmn.slug}`;
             const isChecked = localStorage.getItem(uniqueKey) === 'true';
@@ -175,28 +165,32 @@ function renderTable() {
         return true;
     });
 
-    // Sort Data
-    if (sortOrder === 'desc') {
-        processedData.sort((a, b) => {
-            if (a.isSeparator || b.isSeparator) return 0; // Keep separators in place
+    // 2. Sort Data
+    processedData.sort((a, b) => {
+        if (sortOrder === 'desc') {
+            // Sort by Dex Descending, then Slug Descending
             return b.dex - a.dex || b.slug.localeCompare(a.slug);
-        });
-        // If sorting desc, we should also flip the separators, but keeping it simple for now.
-    }
+        } else {
+            // Sort by Dex Ascending, then Slug Ascending
+            return a.dex - b.dex || a.slug.localeCompare(b.slug);
+        }
+    });
 
-    // 2. Render to DOM
+    // 3. Render to DOM
     tbody.innerHTML = '';
+    let lastGen = null;
     
     processedData.forEach((pkmn) => {
-        const tr = document.createElement('tr');
-        
-        if (pkmn.isSeparator) {
-            tr.className = 'gen-separator';
-            tr.innerHTML = `<td colspan="7">${pkmn.name}</td>`;
-            tbody.appendChild(tr);
-            return;
+        // Insert Generation Header dynamically when gen changes
+        if (pkmn.gen !== lastGen) {
+            const trSep = document.createElement('tr');
+            trSep.className = 'gen-separator';
+            trSep.innerHTML = `<td colspan="7">${getGenName(pkmn.gen)}</td>`;
+            tbody.appendChild(trSep);
+            lastGen = pkmn.gen;
         }
 
+        const tr = document.createElement('tr');
         const uniqueKey = `pkmn_${pkmn.dex}_${pkmn.slug}`;
         const spriteUrl = SPRITE_PATH.replace('{}', pkmn.slug);
         const bgColor = getSlotColor(pkmn.slot);
@@ -237,7 +231,6 @@ document.addEventListener('change', (e) => {
         localStorage.setItem(key, e.target.checked);
         updateProgress();
         
-        // If we are filtering by status, re-render so the row disappears/appears
         if (statusFilter.value !== 'all') {
             renderTable();
         }
@@ -245,11 +238,10 @@ document.addEventListener('change', (e) => {
 });
 
 function updateProgress() {
-    // Total is all valid cards, not just visible ones
-    const totalCards = POKEMON_DATA.filter(p => !p.isSeparator).length;
+    const totalCards = POKEMON_DATA.length;
     let checkedCards = 0;
     
-    POKEMON_DATA.filter(p => !p.isSeparator).forEach(pkmn => {
+    POKEMON_DATA.forEach(pkmn => {
         const uniqueKey = `pkmn_${pkmn.dex}_${pkmn.slug}`;
         if (localStorage.getItem(uniqueKey) === 'true') checkedCards++;
     });
@@ -268,12 +260,6 @@ const importFile = document.getElementById('import-file');
 
 exportBtn.addEventListener('click', () => {
     const data = {};
-    document.querySelectorAll('.have-checkbox').forEach(cb => {
-        // We need to save ALL checkboxes, even ones filtered out of the view
-        data[cb.dataset.key] = cb.checked;
-    });
-    
-    // Also grab any saved checkboxes not currently rendered due to filters
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key.startsWith('pkmn_')) {
@@ -298,11 +284,11 @@ importFile.addEventListener('change', (e) => {
     const reader = new FileReader();
     reader.onload = (event) => {
         try {
-            const data = JSON.parse(event.targetresult);
+            const data = JSON.parse(event.target.result);
             for (const key in data) {
                 localStorage.setItem(key, data[key]);
             }
-            renderTable(); // Re-render to apply checks
+            renderTable(); 
             alert('Progress imported successfully!');
         } catch (err) {
             alert('Error importing file. Please make sure it is a valid JSON export.');
