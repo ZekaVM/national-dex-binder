@@ -166,13 +166,12 @@ function renderTable() {
     });
 
     // 2. Sort Data
+    // We sort by Dex first, and then by the original Card Number to preserve the Base -> Regional -> Variant order!
     processedData.sort((a, b) => {
         if (sortOrder === 'desc') {
-            // Sort by Dex Descending, then Slug Descending
-            return b.dex - a.dex || b.slug.localeCompare(a.slug);
+            return b.dex - a.dex || b.card - a.card; 
         } else {
-            // Sort by Dex Ascending, then Slug Ascending
-            return a.dex - b.dex || a.slug.localeCompare(b.slug);
+            return a.dex - b.dex || a.card - b.card;
         }
     });
 
