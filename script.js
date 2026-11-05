@@ -182,67 +182,6 @@ const VARIANT_FORMS = {
         ["Unown - Question", "201-question", 36]
     ],
     202: [["Wobbuffet - Female", "202-f", 10]],
-    666: [
-        ["Vivillon - Icy Snow", "666-icy-snow", 10],
-        ["Vivillon - Polar", "666-polar", 11],
-        ["Vivillon - Tundra", "666-tundra", 12],
-        ["Vivillon - Continental", "666-continental", 13],
-        ["Vivillon - Garden", "666-garden", 14],
-        ["Vivillon - Elegant", "666-elegant", 15],
-        ["Vivillon - Modern", "666-modern", 16],
-        ["Vivillon - Marine", "666-marine", 17],
-        ["Vivillon - Archipelago", "666-archipelago", 18],
-        ["Vivillon - High Plains", "666-high-plains", 19],
-        ["Vivillon - Sandstorm", "666-sandstorm", 20],
-        ["Vivillon - River", "666-river", 21],
-        ["Vivillon - Monsoon", "666-monsoon", 22],
-        ["Vivillon - Savanna", "666-savanna", 23],
-        ["Vivillon - Sun", "666-sun", 24],
-        ["Vivillon - Ocean", "666-ocean", 25],
-        ["Vivillon - Jungle", "666-jungle", 26],
-        ["Vivillon - Fancy", "666-fancy", 27],
-        ["Vivillon - Poké Ball", "666-poke-ball", 28]
-    ],
-    669: [
-        ["Flabébé - Yellow", "669-yellow", 10],
-        ["Flabébé - Orange", "669-orange", 11],
-        ["Flabébé - Blue", "669-blue", 12],
-        ["Flabébé - White", "669-white", 13]
-    ],
-    670: [
-        ["Floette - Yellow", "670-yellow", 10],
-        ["Floette - Orange", "670-orange", 11],
-        ["Floette - Blue", "670-blue", 12],
-        ["Floette - White", "670-white", 13],
-        ["Floette - Eternal", "10061", 14]
-    ],
-    671: [
-        ["Florges - Yellow", "671-yellow", 10],
-        ["Florges - Orange", "671-orange", 11],
-        ["Florges - Blue", "671-blue", 12],
-        ["Florges - White", "671-white", 13]
-    ],
-    676: [
-        ["Furfrou - Heart Trim", "676-heart", 10],
-        ["Furfrou - Star Trim", "676-star", 11],
-        ["Furfrou - Diamond Trim", "676-diamond", 12],
-        ["Furfrou - Debutante Trim", "676-debutante", 13],
-        ["Furfrou - Matron Trim", "676-matron", 14],
-        ["Furfrou - Dandy Trim", "676-dandy", 15],
-        ["Furfrou - La Reine Trim", "676-la-reine", 16],
-        ["Furfrou - Kabuki Trim", "676-kabuki", 17],
-        ["Furfrou - Pharaoh Trim", "676-pharaoh", 18]
-    ],
-    869: [
-        ["Alcremie - Ruby Cream", "869-ruby-cream-strawberry-sweet", 10],
-        ["Alcremie - Matcha Cream", "869-matcha-cream-strawberry-sweet", 11],
-        ["Alcremie - Mint Cream", "869-mint-cream-strawberry-sweet", 12],
-        ["Alcremie - Lemon Cream", "869-lemon-cream-strawberry-sweet", 13],
-        ["Alcremie - Salted Cream", "869-salted-cream-strawberry-sweet", 14],
-        ["Alcremie - Ruby Swirl", "869-ruby-swirl-strawberry-sweet", 15],
-        ["Alcremie - Caramel Swirl", "869-caramel-swirl-strawberry-sweet", 16],
-        ["Alcremie - Rainbow Swirl", "869-rainbow-swirl-strawberry-sweet", 17]
-    ],
     351: [
         ["Castform - Sunny", "10013", 10],
         ["Castform - Rainy", "10014", 11],
@@ -324,6 +263,67 @@ const VARIANT_FORMS = {
         ["Genesect - Burn Drive", "649-burn", 12],
         ["Genesect - Chill Drive", "649-chill", 13]
     ],
+    666: [
+        ["Vivillon - Icy Snow", "666-icy-snow", 10],
+        ["Vivillon - Polar", "666-polar", 11],
+        ["Vivillon - Tundra", "666-tundra", 12],
+        ["Vivillon - Continental", "666-continental", 13],
+        ["Vivillon - Garden", "666-garden", 14],
+        ["Vivillon - Elegant", "666-elegant", 15],
+        ["Vivillon - Modern", "666-modern", 16],
+        ["Vivillon - Marine", "666-marine", 17],
+        ["Vivillon - Archipelago", "666-archipelago", 18],
+        ["Vivillon - High Plains", "666-high-plains", 19],
+        ["Vivillon - Sandstorm", "666-sandstorm", 20],
+        ["Vivillon - River", "666-river", 21],
+        ["Vivillon - Monsoon", "666-monsoon", 22],
+        ["Vivillon - Savanna", "666-savanna", 23],
+        ["Vivillon - Sun", "666-sun", 24],
+        ["Vivillon - Ocean", "666-ocean", 25],
+        ["Vivillon - Jungle", "666-jungle", 26],
+        ["Vivillon - Fancy", "666-fancy", 27],
+        ["Vivillon - Poké Ball", "666-poke-ball", 28]
+    ],
+    669: [
+        ["Flabébé - Yellow", "669-yellow", 10],
+        ["Flabébé - Orange", "669-orange", 11],
+        ["Flabébé - Blue", "669-blue", 12],
+        ["Flabébé - White", "669-white", 13]
+    ],
+    670: [
+        ["Floette - Yellow", "670-yellow", 10],
+        ["Floette - Orange", "670-orange", 11],
+        ["Floette - Blue", "670-blue", 12],
+        ["Floette - White", "670-white", 13],
+        ["Floette - Eternal", "10061", 14]
+    ],
+    671: [
+        ["Florges - Yellow", "671-yellow", 10],
+        ["Florges - Orange", "671-orange", 11],
+        ["Florges - Blue", "671-blue", 12],
+        ["Florges - White", "671-white", 13]
+    ],
+    676: [
+        ["Furfrou - Heart Trim", "676-heart", 10],
+        ["Furfrou - Star Trim", "676-star", 11],
+        ["Furfrou - Diamond Trim", "676-diamond", 12],
+        ["Furfrou - Debutante Trim", "676-debutante", 13],
+        ["Furfrou - Matron Trim", "676-matron", 14],
+        ["Furfrou - Dandy Trim", "676-dandy", 15],
+        ["Furfrou - La Reine Trim", "676-la-reine", 16],
+        ["Furfrou - Kabuki Trim", "676-kabuki", 17],
+        ["Furfrou - Pharaoh Trim", "676-pharaoh", 18]
+    ],
+    869: [
+        ["Alcremie - Ruby Cream", "869-ruby-cream-strawberry-sweet", 10],
+        ["Alcremie - Matcha Cream", "869-matcha-cream-strawberry-sweet", 11],
+        ["Alcremie - Mint Cream", "869-mint-cream-strawberry-sweet", 12],
+        ["Alcremie - Lemon Cream", "869-lemon-cream-strawberry-sweet", 13],
+        ["Alcremie - Salted Cream", "869-salted-cream-strawberry-sweet", 14],
+        ["Alcremie - Ruby Swirl", "869-ruby-swirl-strawberry-sweet", 15],
+        ["Alcremie - Caramel Swirl", "869-caramel-swirl-strawberry-sweet", 16],
+        ["Alcremie - Rainbow Swirl", "869-rainbow-swirl-strawberry-sweet", 17]
+    ],
     668: [["Pyroar - Female", "668-female", 10]],
     678: [["Meowstic - Female", "10025", 10]],
     681: [["Aegislash - Blade", "10026", 10]],
@@ -341,7 +341,7 @@ const VARIANT_FORMS = {
     ],
     745: [
         ["Lycanroc - Midnight", "10126", 10],
-        ["Lycanroc - Dusk", "10152", 10]
+        ["Lycanroc - Dusk", "10152", 8]
     ],
     746: [["Wishiwashi - School", "10127", 10]],
     774: [
