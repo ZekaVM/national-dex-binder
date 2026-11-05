@@ -19,7 +19,7 @@ const GENS = [
     { name: "Gen 5 (Unova)", dex_start: 494, names: GEN5 },
     { name: "Gen 6 (Kalos)", dex_start: 650, names: GEN6 },
     { name: "Gen 7 (Alola)", dex_start: 722, names: GEN7 },
-    { name: "Gen 8 (Galar)", dex_start: 810, names: GEN8 },
+    { name: "Gen 8 (Galar & Hisui)", dex_start: 810, names: GEN8 },
     { name: "Gen 9 (Paldea)", dex_start: 906, names: GEN9 }
 ];
 
