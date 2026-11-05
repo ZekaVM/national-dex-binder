@@ -153,7 +153,7 @@ const VARIANT_FORMS = {
     ],
     25: [
         ["Pikachu - Female", "25-female", 10],
-        ["Cosplay Pikachu", "25-cosplay", 12]
+        ["Cosplay Pikachu", "25-cosplay", 12],
         ["Ash's Pikachu", "25-ash", 14]
     ],
     172: [["Spiky-eared Pichu", "172-spiky-eared", 10]],
@@ -216,9 +216,9 @@ const VARIANT_FORMS = {
         ["Rotom - Frost", "10010", 12],
         ["Rotom - Fan", "10011", 13],
         ["Rotom - Mow", "10012", 14],
-        ["Rotom - Dex", "rotom-dex", 15]
-        ["Rotom - Phone", "rotom-phone", 16]
-        ["Rotom - Bike", "rotom-bike", 17]
+        ["Rotom - Dex", "rotom-dex", 15],
+        ["Rotom - Phone", "rotom-phone", 16],
+        ["Rotom - Bike", "rotom-bike", 17],
         ["Rotom - Drone", "rotom-drone", 18]
     ],
     483: [["Dialga - Origin", "10245", 10]],
