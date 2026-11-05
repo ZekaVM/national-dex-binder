@@ -87,6 +87,7 @@ const REGIONAL_FORMS = {
 };
 
 const BASE_FORM_NAMES = {
+     25: "Pikachu - Male",
     202: "Wobbuffet - Male",
     412: "Burmy - Plant",
     413: "Wormadam - Plant",
@@ -150,6 +151,11 @@ const VARIANT_FORMS = {
         ["Arbok - Hoenn", "24-hoenn", 10],
         ["Dark Arbok", "24-dark", 12]
     ],
+    25: [
+        ["Pikachu - Female", "25-female", 10],
+        ["Cosplay Pikachu", "25-cosplay", 12]
+        ["Ash's Pikachu", "25-ash", 14]
+    ],
     172: [["Spiky-eared Pichu", "172-spiky-eared", 10]],
     201: [
         ["Unown - A", "201", 9],
@@ -209,7 +215,11 @@ const VARIANT_FORMS = {
         ["Rotom - Wash", "10009", 11],
         ["Rotom - Frost", "10010", 12],
         ["Rotom - Fan", "10011", 13],
-        ["Rotom - Mow", "10012", 14]
+        ["Rotom - Mow", "10012", 14],
+        ["Rotom - Dex", "rotom-dex", 15]
+        ["Rotom - Phone", "rotom-phone", 16]
+        ["Rotom - Bike", "rotom-bike", 17]
+        ["Rotom - Drone", "rotom-drone", 18]
     ],
     483: [["Dialga - Origin", "10245", 10]],
     484: [["Palkia - Origin", "10246", 10]],
