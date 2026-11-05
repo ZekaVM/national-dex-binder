@@ -380,6 +380,10 @@ const VARIANT_FORMS = {
         ["Necrozma - Ultra", "10157", 12]
     ],
     801: [["Magearna - Original Color", "10147", 10]],
+    845: [
+          ["Cramorant - Gulping Form", "845-gulping", 10],
+          ["Cramorant - Gorging Form", "845-gorging", 12]
+         ],
     849: [["Toxtricity - Low Key", "10184", 10]],
     854: [["Sinistea - Antique Form", "854-antique", 10]],
     855: [["Polteageist - Antique Form", "855-antique", 10]],
@@ -389,6 +393,7 @@ const VARIANT_FORMS = {
     888: [["Zacian - Crowned Sword", "10188", 10]],
     889: [["Zamazenta - Crowned Shield", "10189", 10]],
     892: [["Urshifu - Rapid Strike", "10191", 10]],
+    893: [["Dada", "893-dada", 10]],
     898: [
         ["Calyrex - Ice Rider", "10193", 10],
         ["Calyrex - Shadow Rider", "10194", 11]
@@ -593,7 +598,7 @@ function renderTable() {
             <td style="background-color: ${bgColor}; font-weight: bold;">${pkmn.slot}</td>
             <td>
                 <img src="${spriteUrl}" alt="${pkmn.name}" loading="lazy" 
-                     onerror="handleMissingSprite(this, '${pkmn.name}')">
+                     onerror="handleMissingSprite(this, this.alt)">
             </td>
             <td>${pkmn.name}</td>
             <td>${pkmn.dex}</td>
