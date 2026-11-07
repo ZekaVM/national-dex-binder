@@ -153,8 +153,8 @@ const VARIANT_FORMS = {
     ],
     25: [
         ["Pikachu - Female", "25-female", 10],
-        ["Cosplay Pikachu", "25-cosplay", 12],
-        ["Ash's Pikachu", "25-ash", 14]
+        ["Cosplay Pikachu", "10085", 12],
+        ["Ash's Pikachu", "10095", 14]
     ],
     172: [["Spiky-eared Pichu", "172-spiky-eared", 10]],
     201: [
@@ -381,8 +381,8 @@ const VARIANT_FORMS = {
     ],
     801: [["Magearna - Original Color", "10147", 10]],
     845: [
-          ["Cramorant - Gulping Form", "845-gulping", 10],
-          ["Cramorant - Gorging Form", "845-gorging", 12]
+          ["Cramorant - Gulping Form", "10182", 10],
+          ["Cramorant - Gorging Form", "10183", 12]
          ],
     849: [["Toxtricity - Low Key", "10184", 10]],
     854: [["Sinistea - Antique Form", "854-antique", 10]],
@@ -393,7 +393,7 @@ const VARIANT_FORMS = {
     888: [["Zacian - Crowned Sword", "10188", 10]],
     889: [["Zamazenta - Crowned Shield", "10189", 10]],
     892: [["Urshifu - Rapid Strike", "10191", 10]],
-    893: [["Dada", "893-dada", 10]],
+    893: [["Dada", "10192", 10]],
     898: [
         ["Calyrex - Ice Rider", "10193", 10],
         ["Calyrex - Shadow Rider", "10194", 11]
