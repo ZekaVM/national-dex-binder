@@ -87,66 +87,84 @@ const REGIONAL_FORMS = {
 };
 
 const BASE_FORM_NAMES = {
-     25: "Pikachu - Male",
-    202: "Wobbuffet - Male",
-    412: "Burmy - Plant",
-    413: "Wormadam - Plant",
-    415: "Combee - Male",
-    421: "Cherrim - Overcast",
-    422: "Shellos - West",
-    423: "Gastrodon - West",
-    521: "Unfezant - Male",
-    550: "Basculin - Red-Striped",
-    555: "Darmanitan - Standard",
-    585: "Deerling - Spring",
-    586: "Sawsbuck - Spring",
-    592: "Frillish - Male",
-    593: "Jellicent - Male",
-    641: "Tornadus - Incarnate",
-    642: "Thundurus - Incarnate",
-    645: "Landorus - Incarnate",
-    647: "Keldeo - Ordinary",
-    648: "Meloetta - Aria",
-    649: "Genesect - Normal",
-    666: "Vivillon - Meadow",
-    669: "Flabébé - Red",
-    670: "Floette - Red",
-    671: "Florges - Red",
-    676: "Furfrou - Natural",
-    678: "Meowstic - Male",
-    681: "Aegislash - Shield",
-    720: "Hoopa - Confined",
-    741: "Oricorio - Baile",
-    745: "Lycanroc - Midday",
-    746: "Wishiwashi - Solo",
-    773: "Silvally - Normal",
-    774: "Minior - Red Meteor",
-    849: "Toxtricity - Amped",
-    854: "Sinistea - Phony Form",
-    855: "Polteageist - Phony Form",
-    869: "Alcremie - Vanilla Cream",
-    875: "Eiscue - Ice Face",
-    876: "Indeedee - Male",
-    877: "Morpeko - Full Belly",
-    888: "Zacian - Hero of Many Battles",
-    889: "Zamazenta - Hero of Many Battles",
-    892: "Urshifu - Single Strike",
-    902: "Basculegion - Male",
-    905: "Enamorus - Incarnate",
-    916: "Oinkologne - Male",
-    925: "Maushold - Family of Four",
-    931: "Squawkabilly - Green Plumage",
-    964: "Palafin - Zero",
-    978: "Tatsugiri - Curly",
-    982: "Dudunsparce - Two-Segment",
-    999: "Gimmighoul - Chest",
-    1012: "Poltchageist - Counterfeit Form",
-    1013: "Sinistcha - Unremarkable Form",
-    1017: "Ogerpon - Teal Mask",
-    1024: "Terapagos - Normal"
+     3: "Venusaur - Male",
+    12: "Butterfree - Male",
+    25: "Pikachu - Male",
+    44: "Gloom - Male",
+    45: "Vileplume - Male",
+    84: "Doduo - Male",
+    85: "Dodrio - Male",
+   129: "Magikarp - Male",
+   130: "Gyarados - Male",
+   133: "Eevee - Male",
+   178: "Xatu - Male",
+   194: "Wooper - Male",
+   202: "Wobbuffet - Male",
+   203: "Girafarig - Male",
+   214: "Heracross - Male",
+   332: "Cacturne - Male",
+   412: "Burmy - Plant",
+   413: "Wormadam - Plant",
+   415: "Combee - Male",
+   421: "Cherrim - Overcast",
+   422: "Shellos - West",
+   423: "Gastrodon - West",
+   449: "Hippopotas - Male",
+   450: "Hippowdon - Male",
+   521: "Unfezant - Male",
+   550: "Basculin - Red-Striped",
+   555: "Darmanitan - Standard",
+   585: "Deerling - Spring",
+   586: "Sawsbuck - Spring",
+   592: "Frillish - Male",
+   593: "Jellicent - Male",
+   641: "Tornadus - Incarnate",
+   642: "Thundurus - Incarnate",
+   645: "Landorus - Incarnate",
+   647: "Keldeo - Ordinary",
+   648: "Meloetta - Aria",
+   649: "Genesect - Normal",
+   666: "Vivillon - Meadow",
+   669: "Flabébé - Red",
+   670: "Floette - Red",
+   671: "Florges - Red",
+   676: "Furfrou - Natural",
+   678: "Meowstic - Male",
+   681: "Aegislash - Shield",
+   720: "Hoopa - Confined",
+   741: "Oricorio - Baile",
+   745: "Lycanroc - Midday",
+   746: "Wishiwashi - Solo",
+   773: "Silvally - Normal",
+   774: "Minior - Red Meteor",
+   849: "Toxtricity - Amped",
+   854: "Sinistea - Phony Form",
+   855: "Polteageist - Phony Form",
+   869: "Alcremie - Vanilla Cream",
+   875: "Eiscue - Ice Face",
+   876: "Indeedee - Male",
+   877: "Morpeko - Full Belly",
+   888: "Zacian - Hero of Many Battles",
+   889: "Zamazenta - Hero of Many Battles",
+   892: "Urshifu - Single Strike",
+   902: "Basculegion - Male",
+   905: "Enamorus - Incarnate",
+   916: "Oinkologne - Male",
+   925: "Maushold - Family of Four",
+   931: "Squawkabilly - Green Plumage",
+   964: "Palafin - Zero",
+   978: "Tatsugiri - Curly",
+   982: "Dudunsparce - Two-Segment",
+   999: "Gimmighoul - Chest",
+  1012: "Poltchageist - Counterfeit Form",
+  1013: "Sinistcha - Unremarkable Form",
+  1017: "Ogerpon - Teal Mask",
+  1024: "Terapagos - Normal"
 };
 
 const VARIANT_FORMS = {
+     3: [["Venusaur - Female", "3-f", 10]],
+    12: [["Butterfree - Female", "12-f", 10]],
     24: [
         ["Arbok - Hoenn", "24-hoenn", 10],
         ["Dark Arbok", "24-dark", 12]
@@ -156,8 +174,17 @@ const VARIANT_FORMS = {
         ["Cosplay Pikachu", "10085", 12],
         ["Ash's Pikachu", "10095", 14]
     ],
-    172: [["Spiky-eared Pichu", "172-spiky-eared", 10]],
-    201: [
+    44: [["Gloom - Female", "44-f", 10]],
+    45: [["Vileplume - Female", "45-f", 10]],
+    84: [["Doduo - Female", "84-f", 10]],
+    85: [["Dodrio - Female", "85-f", 10]],
+   129: [["Magikarp - Female", "129-f", 10]],
+   130: [["Gyarados - Female", "130-f", 10]],
+   133: [["Eevee - Female", "133-f", 10]],
+   172: [["Spiky-eared Pichu", "172-spiky-eared", 10]],
+   178: [["Xatu - Female", "178-f", 10]],
+   194: [["Wooper - Female", "194-f", 10]],
+   201: [
         ["Unown - A", "201", 9],
         ["Unown - B", "201-b", 10],
         ["Unown - C", "201-c", 11],
@@ -187,30 +214,35 @@ const VARIANT_FORMS = {
         ["Unown - Exclamation", "201-exclamation", 35],
         ["Unown - Question", "201-question", 36]
     ],
-    202: [["Wobbuffet - Female", "202-f", 10]],
-    351: [
+   202: [["Wobbuffet - Female", "202-f", 10]],
+   203: [["Girafarig - Female", "203-f", 10]],
+   214: [["Heracross - Female", "214-f", 10]],
+   332: [["Cacturne - Female", "332-f", 10]],
+   351: [
         ["Castform - Sunny", "10013", 10],
         ["Castform - Rainy", "10014", 11],
         ["Castform - Snowy", "10015", 12]
     ],
-    386: [
+   386: [
         ["Deoxys - Attack", "10001", 10],
         ["Deoxys - Defense", "10002", 11],
         ["Deoxys - Speed", "10003", 12]
     ],
-    412: [
+   412: [
         ["Burmy - Sandy", "412-sandy", 10],
         ["Burmy - Trash", "412-trash", 11]
     ],
-    413: [
+   413: [
         ["Wormadam - Sandy", "10004", 10],
         ["Wormadam - Trash", "10005", 11]
     ],
-    415: [["Combee - Female", "415-f", 10]],
-    421: [["Cherrim - Sunshine", "421-sunshine", 10]],
-    422: [["Shellos - East", "422-east", 10]],
-    423: [["Gastrodon - East", "423-east", 10]],
-    479: [
+   415: [["Combee - Female", "415-f", 10]],
+   421: [["Cherrim - Sunshine", "421-sunshine", 10]],
+   422: [["Shellos - East", "422-east", 10]],
+   423: [["Gastrodon - East", "423-east", 10]],
+   449: [["Hippopotas - Female", "449-f", 10]],
+   450: [["Hippowdon - Female", "450-f", 10]],
+   479: [
         ["Rotom - Heat", "10008", 10],
         ["Rotom - Wash", "10009", 11],
         ["Rotom - Frost", "10010", 12],
@@ -221,11 +253,11 @@ const VARIANT_FORMS = {
         ["Rotom - Bike", "rotom-bike", 17],
         ["Rotom - Drone", "rotom-drone", 18]
     ],
-    483: [["Dialga - Origin", "10245", 10]],
-    484: [["Palkia - Origin", "10246", 10]],
-    487: [["Giratina - Origin", "10007", 10]],
-    492: [["Shaymin - Sky", "10006", 10]],
-    493: [
+   483: [["Dialga - Origin", "10245", 10]],
+   484: [["Palkia - Origin", "10246", 10]],
+   487: [["Giratina - Origin", "10007", 10]],
+   492: [["Shaymin - Sky", "10006", 10]],
+   493: [
         ["Arceus - Grass", "493-grass", 10],
         ["Arceus - Fire", "493-fire", 11],
         ["Arceus - Water", "493-water", 12],
@@ -236,44 +268,44 @@ const VARIANT_FORMS = {
         ["Arceus - Steel", "493-steel", 17],
         ["Arceus - Dragon", "493-dragon", 18]
     ],
-    521: [["Unfezant - Female", "521-f", 10]],
-    550: [
+   521: [["Unfezant - Female", "521-f", 10]],
+   550: [
         ["Basculin - Blue-Striped", "10016", 10],
         ["Basculin - White-Striped", "10247", 11]
     ],
-    555: [
+   555: [
         ["Darmanitan - Zen", "10017", 10],
         ["Darmanitan - Galarian (Standard)", "10177", 11],
         ["Darmanitan - Galarian (Zen)", "10178", 12]
     ],
-    585: [
+   585: [
         ["Deerling - Summer", "585-summer", 10],
         ["Deerling - Autumn", "585-autumn", 11],
         ["Deerling - Winter", "585-winter", 12]
     ],
-    586: [
+   586: [
         ["Sawsbuck - Summer", "586-summer", 10],
         ["Sawsbuck - Autumn", "586-autumn", 11],
         ["Sawsbuck - Winter", "586-winter", 12]
     ],
-    592: [["Frillish - Female", "592-female", 10]],
-    593: [["Jellicent - Female", "593-female", 10]],
-    641: [["Tornadus - Therian", "10019", 10]],
-    642: [["Thundurus - Therian", "10020", 10]],
-    645: [["Landorus - Therian", "10021", 10]],
-    646: [
+   592: [["Frillish - Female", "592-female", 10]],
+   593: [["Jellicent - Female", "593-female", 10]],
+   641: [["Tornadus - Therian", "10019", 10]],
+   642: [["Thundurus - Therian", "10020", 10]],
+   645: [["Landorus - Therian", "10021", 10]],
+   646: [
         ["Kyurem - Black", "10022", 10],
         ["Kyurem - White", "10023", 11]
     ],
-    647: [["Keldeo - Resolute", "10024", 10]],
-    648: [["Meloetta - Pirouette", "10018", 10]],
-    649: [
+   647: [["Keldeo - Resolute", "10024", 10]],
+   648: [["Meloetta - Pirouette", "10018", 10]],
+   649: [
         ["Genesect - Douse Drive", "649-douse", 10],
         ["Genesect - Shock Drive", "649-shock", 11],
         ["Genesect - Burn Drive", "649-burn", 12],
         ["Genesect - Chill Drive", "649-chill", 13]
     ],
-    666: [
+   666: [
         ["Vivillon - Icy Snow", "666-icy-snow", 10],
         ["Vivillon - Polar", "666-polar", 11],
         ["Vivillon - Tundra", "666-tundra", 12],
@@ -294,26 +326,26 @@ const VARIANT_FORMS = {
         ["Vivillon - Fancy", "666-fancy", 27],
         ["Vivillon - Poké Ball", "666-poke-ball", 28]
     ],
-    669: [
+   669: [
         ["Flabébé - Yellow", "669-yellow", 10],
         ["Flabébé - Orange", "669-orange", 11],
         ["Flabébé - Blue", "669-blue", 12],
         ["Flabébé - White", "669-white", 13]
     ],
-    670: [
+   670: [
         ["Floette - Yellow", "670-yellow", 10],
         ["Floette - Orange", "670-orange", 11],
         ["Floette - Blue", "670-blue", 12],
         ["Floette - White", "670-white", 13],
         ["Floette - Eternal", "10061", 14]
     ],
-    671: [
+   671: [
         ["Florges - Yellow", "671-yellow", 10],
         ["Florges - Orange", "671-orange", 11],
         ["Florges - Blue", "671-blue", 12],
         ["Florges - White", "671-white", 13]
     ],
-    676: [
+   676: [
         ["Furfrou - Heart Trim", "676-heart", 10],
         ["Furfrou - Star Trim", "676-star", 11],
         ["Furfrou - Diamond Trim", "676-diamond", 12],
@@ -324,7 +356,7 @@ const VARIANT_FORMS = {
         ["Furfrou - Kabuki Trim", "676-kabuki", 17],
         ["Furfrou - Pharaoh Trim", "676-pharaoh", 18]
     ],
-    869: [
+   869: [
         ["Alcremie - Ruby Cream", "869-ruby-cream-strawberry-sweet", 10],
         ["Alcremie - Matcha Cream", "869-matcha-cream-strawberry-sweet", 11],
         ["Alcremie - Mint Cream", "869-mint-cream-strawberry-sweet", 12],
@@ -334,27 +366,27 @@ const VARIANT_FORMS = {
         ["Alcremie - Caramel Swirl", "869-caramel-swirl-strawberry-sweet", 16],
         ["Alcremie - Rainbow Swirl", "869-rainbow-swirl-strawberry-sweet", 17]
     ],
-    668: [["Pyroar - Female", "668-female", 10]],
-    678: [["Meowstic - Female", "10025", 10]],
-    681: [["Aegislash - Blade", "10026", 10]],
-    716: [["Xerneas - Active", "716-active", 10]],
-    718: [
+   668: [["Pyroar - Female", "668-female", 10]],
+   678: [["Meowstic - Female", "10025", 10]],
+   681: [["Aegislash - Blade", "10026", 10]],
+   716: [["Xerneas - Active", "716-active", 10]],
+   718: [
         ["Zygarde - 10%", "10118", 10],
         ["Zygarde - 50%", "718", 11],
         ["Zygarde - Complete", "10120", 12]
     ],
-    720: [["Hoopa - Unbound", "10086", 10]],
-    741: [
+   720: [["Hoopa - Unbound", "10086", 10]],
+   741: [
         ["Oricorio - Pom-Pom", "10123", 10],
         ["Oricorio - Pa'u", "10124", 10],
         ["Oricorio - Sensu", "10125", 10]
     ],
-    745: [
+   745: [
         ["Lycanroc - Midnight", "10126", 10],
         ["Lycanroc - Dusk", "10152", 8]
     ],
-    746: [["Wishiwashi - School", "10127", 10]],
-    774: [
+   746: [["Wishiwashi - School", "10127", 10]],
+   774: [
         ["Minior - Red Core", "10136", 10],
         ["Minior - Orange Core", "10137", 10],
         ["Minior - Yellow Core", "10138", 10],
@@ -363,7 +395,7 @@ const VARIANT_FORMS = {
         ["Minior - Indigo Core", "10141", 10],
         ["Minior - Violet Core", "10142", 10]
     ],
-    773: [
+   773: [
         ["Silvally - Grass", "773-grass", 10],
         ["Silvally - Fire", "773-fire", 11],
         ["Silvally - Water", "773-water", 12],
@@ -374,55 +406,55 @@ const VARIANT_FORMS = {
         ["Silvally - Steel", "773-steel", 17],
         ["Silvally - Dragon", "773-dragon", 18]
     ],
-    800: [
+   800: [
         ["Necrozma - Dusk Mane", "10155", 10],
         ["Necrozma - Dawn Wings", "10156", 11],
         ["Necrozma - Ultra", "10157", 12]
     ],
-    801: [["Magearna - Original Color", "10147", 10]],
-    845: [
+   801: [["Magearna - Original Color", "10147", 10]],
+   845: [
           ["Cramorant - Gulping Form", "10182", 10],
           ["Cramorant - Gorging Form", "10183", 12]
          ],
-    849: [["Toxtricity - Low Key", "10184", 10]],
-    854: [["Sinistea - Antique Form", "854-antique", 10]],
-    855: [["Polteageist - Antique Form", "855-antique", 10]],
-    875: [["Eiscue - Noice Face", "10185", 10]],
-    876: [["Indeedee - Female", "10186", 10]],
-    877: [["Morpeko - Hangry Mode", "10187", 10]],
-    888: [["Zacian - Crowned Sword", "10188", 10]],
-    889: [["Zamazenta - Crowned Shield", "10189", 10]],
-    892: [["Urshifu - Rapid Strike", "10191", 10]],
-    893: [["Dada", "10192", 10]],
-    898: [
+   849: [["Toxtricity - Low Key", "10184", 10]],
+   854: [["Sinistea - Antique Form", "854-antique", 10]],
+   855: [["Polteageist - Antique Form", "855-antique", 10]],
+   875: [["Eiscue - Noice Face", "10185", 10]],
+   876: [["Indeedee - Female", "10186", 10]],
+   877: [["Morpeko - Hangry Mode", "10187", 10]],
+   888: [["Zacian - Crowned Sword", "10188", 10]],
+   889: [["Zamazenta - Crowned Shield", "10189", 10]],
+   892: [["Urshifu - Rapid Strike", "10191", 10]],
+   893: [["Dada", "10192", 10]],
+   898: [
         ["Calyrex - Ice Rider", "10193", 10],
         ["Calyrex - Shadow Rider", "10194", 11]
     ],
-    901: [["Ursaluna - Bloodmoon", "10272", 10]],
-    902: [["Basculegion - Female", "10248", 10]],
-    905: [["Enamorus - Therian", "10249", 10]],
-    916: [["Oinkologne - Female", "10254", 10]],
-    925: [["Maushold - Family of Three", "10257", 10]],
-    931: [
+   901: [["Ursaluna - Bloodmoon", "10272", 10]],
+   902: [["Basculegion - Female", "10248", 10]],
+   905: [["Enamorus - Therian", "10249", 10]],
+   916: [["Oinkologne - Female", "10254", 10]],
+   925: [["Maushold - Family of Three", "10257", 10]],
+   931: [
         ["Squawkabilly - Blue", "10260", 10],
         ["Squawkabilly - Yellow", "10261", 10],
         ["Squawkabilly - White", "10262", 10]
     ],
-    964: [["Palafin - Hero", "10256", 10]],
-    978: [
+   964: [["Palafin - Hero", "10256", 10]],
+   978: [
         ["Tatsugiri - Droopy", "10258", 10],
         ["Tatsugiri - Stretchy", "10259", 10]
     ],
-    982: [["Dudunsparce - Three-Segment", "10255", 10]],
-    999: [["Gimmighoul - Roaming", "10263", 10]],
-    1012: [["Poltchageist - Artisan Form", "1012-artisan", 10]],
-    1013: [["Sinistcha - Masterpiece Form", "1013-masterpiece", 10]],
-    1017: [
+   982: [["Dudunsparce - Three-Segment", "10255", 10]],
+   999: [["Gimmighoul - Roaming", "10263", 10]],
+  1012: [["Poltchageist - Artisan Form", "1012-artisan", 10]],
+  1013: [["Sinistcha - Masterpiece Form", "1013-masterpiece", 10]],
+  1017: [
         ["Ogerpon - Wellspring Mask", "10273", 10],
         ["Ogerpon - Hearthflame Mask", "10274", 10],
         ["Ogerpon - Cornerstone Mask", "10275", 10]
     ],
-    1024: [["Terapagos - Terastal", "10276", 10]]
+  1024: [["Terapagos - Terastal", "10276", 10]]
 };
 
 // ============================================================
