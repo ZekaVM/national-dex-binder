@@ -185,7 +185,7 @@ const VARIANT_FORMS = {
     ],
     44: [["Gloom - Female", "44-f", 10]],
     45: [["Vileplume - Female", "45-f", 10]],
-    52: [["Gigantamax Meowth", "10200", 2]],
+    52: [["Gigantamax Meowth", "10200", 1]],
     68: [["Gigantamax Machamp", "10201", 99]],
     84: [["Doduo - Female", "84-f", 10]],
     85: [["Dodrio - Female", "85-f", 10]],
@@ -324,6 +324,7 @@ const VARIANT_FORMS = {
         ["Genesect - Burn Drive", "649-burn", 12],
         ["Genesect - Chill Drive", "649-chill", 13]
     ],
+   658: [["Greninja - Ash", "10117", 10]],
    666: [
         ["Vivillon - Icy Snow", "666-icy-snow", 10],
         ["Vivillon - Polar", "666-polar", 11],
@@ -495,10 +496,17 @@ const VARIANT_FORMS = {
   1013: [["Sinistcha - Masterpiece Form", "1013-masterpiece", 10]],
   1017: [
         ["Ogerpon - Wellspring Mask", "10273", 10],
-        ["Ogerpon - Hearthflame Mask", "10274", 10],
-        ["Ogerpon - Cornerstone Mask", "10275", 10]
+        ["Ogerpon - Tera Wellspring", "10279", 11],
+        ["Ogerpon - Hearthflame Mask", "10274", 20],
+        ["Ogerpon - Tera Hearthflame", "10280", 21],
+        ["Ogerpon - Cornerstone Mask", "10275", 30],
+        ["Ogerpon - Tera Cornerstone", "10281", 31],
+        ["Ogerpon - Tera Teal", "10278", 40]
     ],
-  1024: [["Terapagos - Terastal", "10276", 10]]
+  1024: [
+        ["Terapagos - Terastal", "10276", 10],
+        ["Terapagos - Stellar", "10277", 20]
+    ]
 };
 
 // ============================================================
@@ -521,19 +529,39 @@ function generateData() {
         gen.names.forEach((baseName, i) => {
             const dex = gen.dex_start + i;
 
+            // 1. Add Base Form
             if (![201, 716, 718].includes(dex)) {
                 addRow(dex, BASE_FORM_NAMES[dex] || baseName, dex.toString(), genId);
             }
 
+            // 2. Gather all forms together (Regional + Variant)
+            let allForms = [];
+
             if (REGIONAL_FORMS[dex]) {
-                const sorted = [...REGIONAL_FORMS[dex]].sort((a, b) => a[3] - b[3]);
-                sorted.forEach(r => addRow(dex, `${baseName} - ${r[1]}`, r[2], genId));
+                REGIONAL_FORMS[dex].forEach(r => {
+                    allForms.push({
+                        name: `${baseName} - ${r[1]}`,
+                        slug: r[2],
+                        priority: r[3]
+                    });
+                });
             }
 
             if (VARIANT_FORMS[dex]) {
-                const sorted = [...VARIANT_FORMS[dex]].sort((a, b) => a[2] - b[2]);
-                sorted.forEach(v => addRow(dex, v[0], v[1], genId));
+                VARIANT_FORMS[dex].forEach(v => {
+                    allForms.push({
+                        name: v[0],
+                        slug: v[1],
+                        priority: v[2]
+                    });
+                });
             }
+
+            // 3. Sort all forms by priority
+            allForms.sort((a, b) => a.priority - b.priority);
+
+            // 4. Add them to the row data
+            allForms.forEach(f => addRow(dex, f.name, f.slug, genId));
         });
     });
 }
