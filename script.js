@@ -385,7 +385,7 @@ const VARIANT_FORMS = {
    839: [["Gigantamax Coalossal", "10215", 99]],
    841: [["Gigantamax Flapple", "10216", 99]],
    842: [["Gigantamax Appletun", "10217", 99]],
-   844: [["Gigantamax Sandaconda", "10218", 99]]
+   844: [["Gigantamax Sandaconda", "10218", 99]],
    845: [
         ["Cramorant - Gulping Form", "10182", 10],
         ["Cramorant - Gorging Form", "10183", 12]
@@ -463,6 +463,7 @@ const VARIANT_FORMS = {
    884: [["Gigantamax Duraludon", "10225", 99]],
    888: [["Zacian - Crowned Sword", "10188", 10]],
    889: [["Zamazenta - Crowned Shield", "10189", 10]],
+   890: [["Eternamax Eternatus", "10190", 99]],
    892: [
         ["Urshifu - Rapid Strike", "10191", 10],
         ["Gigantamax Urshifu (Single Strike)", "10226", 5],
