@@ -34,8 +34,8 @@ const REGIONAL_FORMS = {
     50: [["Diglett", "Alolan", "10105", 1]],
     51: [["Dugtrio", "Alolan", "10106", 1]],
     52: [
-        ["Meowth", "Alolan", "10107", 1],
-        ["Meowth", "Galarian", "10161", 2]
+        ["Meowth", "Alolan", "10107", 2],
+        ["Meowth", "Galarian", "10161", 3]
     ],
     53: [["Persian", "Alolan", "10108", 1]],
     58: [["Growlithe", "Hisuian", "10229", 3]],
@@ -185,7 +185,7 @@ const VARIANT_FORMS = {
     ],
     44: [["Gloom - Female", "44-f", 10]],
     45: [["Vileplume - Female", "45-f", 10]],
-    52: [["Gigantamax Meowth", "10200", 99]],
+    52: [["Gigantamax Meowth", "10200", 2]],
     68: [["Gigantamax Machamp", "10201", 99]],
     84: [["Doduo - Female", "84-f", 10]],
     85: [["Dodrio - Female", "85-f", 10]],
@@ -201,7 +201,7 @@ const VARIANT_FORMS = {
    143: [["Gigantamax Snorlax", "10206", 99]],
    172: [["Spiky-eared Pichu", "172-spiky-eared", 10]],
    178: [["Xatu - Female", "178-f", 10]],
-   194: [["Wooper - Female", "194-f", 10]],
+   194: [["Wooper - Female", "194-f", 2]],
    201: [
         ["Unown - A", "201", 9],
         ["Unown - B", "201-b", 10],
@@ -379,13 +379,13 @@ const VARIANT_FORMS = {
    812: [["Gigantamax Rillaboom", "10209", 99]],
    815: [["Gigantamax Cinderace", "10210", 99]],
    818: [["Gigantamax Inteleon", "10211", 99]],
-   820: [["Gigantamax Greedent", "10212", 99]],
-   823: [["Gigantamax Corviknight", "10213", 99]],
-   826: [["Gigantamax Orbeetle", "10214", 99]],
-   834: [["Gigantamax Drednaw", "10215", 99]],
-   839: [["Gigantamax Coalossal", "10216", 99]],
-   841: [["Gigantamax Flapple", "10217", 99]],
-   842: [["Gigantamax Appletun", "10218", 99]],
+   823: [["Gigantamax Corviknight", "10212", 99]],
+   826: [["Gigantamax Orbeetle", "10213", 99]],
+   834: [["Gigantamax Drednaw", "10214", 99]],
+   839: [["Gigantamax Coalossal", "10215", 99]],
+   841: [["Gigantamax Flapple", "10216", 99]],
+   842: [["Gigantamax Appletun", "10217", 99]],
+   844: [["Gigantamax Sandaconda", "10218", 99]]
    845: [
         ["Cramorant - Gulping Form", "10182", 10],
         ["Cramorant - Gorging Form", "10183", 12]
@@ -394,7 +394,7 @@ const VARIANT_FORMS = {
         ["Toxtricity - Low Key", "10184", 10],
         ["Gigantamax Toxtricity", "10219", 99]
     ],
-   851: [["Gigantamax Sandaconda", "10220", 99]],
+   851: [["Gigantamax Centiskorch", "10220", 99]],
    854: [["Sinistea - Antique Form", "854-antique", 10]],
    855: [["Polteageist - Antique Form", "855-antique", 10]],
    858: [["Gigantamax Hatterene", "10221", 99]],
@@ -465,8 +465,8 @@ const VARIANT_FORMS = {
    889: [["Zamazenta - Crowned Shield", "10189", 10]],
    892: [
         ["Urshifu - Rapid Strike", "10191", 10],
-        ["Gigantamax Urshifu (Single Strike)", "10226", 99],
-        ["Gigantamax Urshifu (Rapid Strike)", "10227", 100]
+        ["Gigantamax Urshifu (Single Strike)", "10226", 5],
+        ["Gigantamax Urshifu (Rapid Strike)", "10227", 15]
     ],
    893: [["Dada", "10192", 10]],
    898: [
