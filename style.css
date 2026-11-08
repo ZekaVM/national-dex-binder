@@ -131,11 +131,69 @@ td img {
     accent-color: #2F5597;
 }
 
-/* Responsive tweaks */
+/* Responsive tweaks for Mobile */
 @media (max-width: 900px) {
-    header { flex-direction: column; text-align: center; }
-    #filter-controls { justify-content: center; }
-    main { padding: 0.5rem; }
-    th, td { padding: 0.4rem; font-size: 0.85rem; }
-    td img { width: 50px; height: 50px; }
+    header { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 0.75rem 0.5rem; /* Much less padding */
+        gap: 0.5rem; /* Tighter gap between rows */
+    }
+    
+    header h1 { 
+        font-size: 1.2rem; /* Smaller title */
+        margin-bottom: 0.25rem;
+    }
+
+    #filter-controls { 
+        justify-content: center; 
+        width: 100%;
+        gap: 0.4rem;
+    }
+
+    /* Make the search bar take the full width */
+    #filter-controls #search-bar {
+        flex-basis: 100%;
+        width: 100%;
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    /* Make dropdowns sit side-by-side (2 per row) */
+    #filter-controls select {
+        flex: 1 1 calc(50% - 0.4rem);
+        max-width: 50%;
+        padding: 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    #progress-container {
+        font-size: 0.95rem;
+        margin: 0.25rem 0;
+    }
+
+    #controls {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    #controls button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    main { 
+        padding: 0.5rem; 
+    }
+    
+    th, td { 
+        padding: 0.4rem; 
+        font-size: 0.85rem; 
+    }
+    
+    td img { 
+        width: 50px; 
+        height: 50px; 
+    }
 }
