@@ -165,14 +165,24 @@ const BASE_FORM_NAMES = {
 const VARIANT_FORMS = {
      3: [
         ["Venusaur - Female", "3-f", 10],
+        ["Mega Venusaur", "10033", 20],
         ["Gigantamax Venusaur", "10195", 99]
     ],
-     6: [["Gigantamax Charizard", "10196", 99]],
-     9: [["Gigantamax Blastoise", "10197", 99]],
+     6: [
+        ["Mega Charizard X", "10034", 20],
+        ["Mega Charizard Y", "10035", 21],
+        ["Gigantamax Charizard", "10196", 99]
+    ],
+     9: [
+        ["Mega Blastoise", "10036", 20],
+        ["Gigantamax Blastoise", "10197", 99]
+    ],
     12: [
         ["Butterfree - Female", "12-f", 10],
         ["Gigantamax Butterfree", "10198", 99]
     ],
+    15: [["Mega Beedrill", "10090", 20]],
+    18: [["Mega Pidgeot", "10073", 20]],
     24: [
         ["Arbok - Hoenn", "24-hoenn", 10],
         ["Dark Arbok", "24-dark", 12]
@@ -186,21 +196,37 @@ const VARIANT_FORMS = {
     44: [["Gloom - Female", "44-f", 10]],
     45: [["Vileplume - Female", "45-f", 10]],
     52: [["Gigantamax Meowth", "10200", 1]],
+    65: [["Mega Alakazam", "10037", 20]],
     68: [["Gigantamax Machamp", "10201", 99]],
+    80: [["Mega Slowbro", "10071", 20]],
     84: [["Doduo - Female", "84-f", 10]],
     85: [["Dodrio - Female", "85-f", 10]],
-    94: [["Gigantamax Gengar", "10202", 99]],
+    94: [
+        ["Mega Gengar", "10038", 20],
+        ["Gigantamax Gengar", "10202", 99]
+    ],
     99: [["Gigantamax Kingler", "10203", 99]],
+   115: [["Mega Kangaskhan", "10039", 20]],
+   127: [["Mega Pinsir", "10040", 20]],
    129: [["Magikarp - Female", "129-f", 10]],
-   130: [["Gyarados - Female", "130-f", 10]],
+   130: [
+        ["Gyarados - Female", "130-f", 10],
+        ["Mega Gyarados", "10041", 20]
+    ],
    131: [["Gigantamax Lapras", "10204", 99]],
    133: [
         ["Eevee - Female", "133-f", 10],
         ["Gigantamax Eevee", "10205", 99]
     ],
+   142: [["Mega Aerodactyl", "10042", 20]],
    143: [["Gigantamax Snorlax", "10206", 99]],
+   150: [
+        ["Mega Mewtwo X", "10043", 20],
+        ["Mega Mewtwo Y", "10044", 21]
+    ],
    172: [["Spiky-eared Pichu", "172-spiky-eared", 10]],
    178: [["Xatu - Female", "178-f", 10]],
+   181: [["Mega Ampharos", "10045", 20]],
    194: [["Wooper - Female", "194-f", 2]],
    201: [
         ["Unown - A", "201", 9],
@@ -234,13 +260,41 @@ const VARIANT_FORMS = {
     ],
    202: [["Wobbuffet - Female", "202-f", 10]],
    203: [["Girafarig - Female", "203-f", 10]],
-   214: [["Heracross - Female", "214-f", 10]],
+   208: [["Mega Steelix", "10072", 20]],
+   212: [["Mega Scizor", "10046", 20]],
+   214: [
+        ["Heracross - Female", "214-f", 10],
+        ["Mega Heracross", "10047", 20]
+    ],
+   229: [["Mega Houndoom", "10048", 20]],
+   248: [["Mega Tyranitar", "10049", 20]],
+   254: [["Mega Sceptile", "10065", 20]],
+   257: [["Mega Blaziken", "10050", 20]],
+   260: [["Mega Swampert", "10064", 20]],
+   282: [["Mega Gardevoir", "10051", 20]],
+   302: [["Mega Sableye", "10066", 20]],
+   303: [["Mega Mawile", "10052", 20]],
+   306: [["Mega Aggron", "10053", 20]],
+   308: [["Mega Medicham", "10054", 20]],
+   310: [["Mega Manectric", "10055", 20]],
+   319: [["Mega Sharpedo", "10070", 20]],
+   323: [["Mega Camerupt", "10087", 20]],
    332: [["Cacturne - Female", "332-f", 10]],
+   334: [["Mega Altaria", "10067", 20]],
    351: [
         ["Castform - Sunny", "10013", 10],
         ["Castform - Rainy", "10014", 11],
         ["Castform - Snowy", "10015", 12]
     ],
+   359: [["Mega Absol", "10057", 20]],
+   362: [["Mega Glalie", "10074", 20]],
+   373: [["Mega Salamence", "10089", 20]],
+   376: [["Mega Metagross", "10076", 20]],
+   380: [["Mega Latias", "10062", 20]],
+   381: [["Mega Latios", "10063", 20]],
+   382: [["Primal Kyogre", "10077", 20]],
+   383: [["Primal Groudon", "10078", 20]],
+   384: [["Mega Rayquaza", "10079", 20]],
    386: [
         ["Deoxys - Attack", "10001", 10],
         ["Deoxys - Defense", "10002", 11],
@@ -258,8 +312,13 @@ const VARIANT_FORMS = {
    421: [["Cherrim - Sunshine", "421-sunshine", 10]],
    422: [["Shellos - East", "422-east", 10]],
    423: [["Gastrodon - East", "423-east", 10]],
+   428: [["Mega Lopunny", "10088", 20]],
+   445: [["Mega Garchomp", "10058", 20]],
+   448: [["Mega Lucario", "10059", 20]],
    449: [["Hippopotas - Female", "449-f", 10]],
    450: [["Hippowdon - Female", "450-f", 10]],
+   460: [["Mega Abomasnow", "10060", 20]],
+   475: [["Mega Gallade", "10068", 20]],
    479: [
         ["Rotom - Heat", "10008", 10],
         ["Rotom - Wash", "10009", 11],
@@ -287,6 +346,7 @@ const VARIANT_FORMS = {
         ["Arceus - Dragon", "493-dragon", 18]
     ],
    521: [["Unfezant - Female", "521-f", 10]],
+   531: [["Mega Audino", "10069", 20]],
    550: [
         ["Basculin - Blue-Striped", "10016", 10],
         ["Basculin - White-Striped", "10247", 11]
@@ -346,6 +406,10 @@ const VARIANT_FORMS = {
         ["Vivillon - Fancy", "666-fancy", 27],
         ["Vivillon - Poké Ball", "666-poke-ball", 28]
     ],
+   668: [
+        ["Mega Pyroar", "mega-pyroar", 10],
+        ["Pyroar - Female", "668-female", 20]
+    ],
    669: [
         ["Flabébé - Yellow", "669-yellow", 10],
         ["Flabébé - Orange", "669-orange", 11],
@@ -376,43 +440,10 @@ const VARIANT_FORMS = {
         ["Furfrou - Kabuki Trim", "676-kabuki", 17],
         ["Furfrou - Pharaoh Trim", "676-pharaoh", 18]
     ],
-   809: [["Gigantamax Melmetal", "10208", 99]],
-   812: [["Gigantamax Rillaboom", "10209", 99]],
-   815: [["Gigantamax Cinderace", "10210", 99]],
-   818: [["Gigantamax Inteleon", "10211", 99]],
-   823: [["Gigantamax Corviknight", "10212", 99]],
-   826: [["Gigantamax Orbeetle", "10213", 99]],
-   834: [["Gigantamax Drednaw", "10214", 99]],
-   839: [["Gigantamax Coalossal", "10215", 99]],
-   841: [["Gigantamax Flapple", "10216", 99]],
-   842: [["Gigantamax Appletun", "10217", 99]],
-   844: [["Gigantamax Sandaconda", "10218", 99]],
-   845: [
-        ["Cramorant - Gulping Form", "10182", 10],
-        ["Cramorant - Gorging Form", "10183", 12]
+   678: [
+        ["Mega Meowstic", "mega-meowstic", 10],
+        ["Meowstic - Female", "10025", 20]
     ],
-   849: [
-        ["Toxtricity - Low Key", "10184", 10],
-        ["Gigantamax Toxtricity", "10219", 99]
-    ],
-   851: [["Gigantamax Centiskorch", "10220", 99]],
-   854: [["Sinistea - Antique Form", "854-antique", 10]],
-   855: [["Polteageist - Antique Form", "855-antique", 10]],
-   858: [["Gigantamax Hatterene", "10221", 99]],
-   861: [["Gigantamax Grimmsnarl", "10222", 99]],
-   869: [
-        ["Alcremie - Ruby Cream", "869-ruby-cream-strawberry-sweet", 10],
-        ["Alcremie - Matcha Cream", "869-matcha-cream-strawberry-sweet", 11],
-        ["Alcremie - Mint Cream", "869-mint-cream-strawberry-sweet", 12],
-        ["Alcremie - Lemon Cream", "869-lemon-cream-strawberry-sweet", 13],
-        ["Alcremie - Salted Cream", "869-salted-cream-strawberry-sweet", 14],
-        ["Alcremie - Ruby Swirl", "869-ruby-swirl-strawberry-sweet", 15],
-        ["Alcremie - Caramel Swirl", "869-caramel-swirl-strawberry-sweet", 16],
-        ["Alcremie - Rainbow Swirl", "869-rainbow-swirl-strawberry-sweet", 17],
-        ["Gigantamax Alcremie", "10223", 99]
-    ],
-   668: [["Pyroar - Female", "668-female", 10]],
-   678: [["Meowstic - Female", "10025", 10]],
    681: [["Aegislash - Blade", "10026", 10]],
    716: [["Xerneas - Active", "716-active", 10]],
    718: [
@@ -420,6 +451,7 @@ const VARIANT_FORMS = {
         ["Zygarde - 50%", "718", 11],
         ["Zygarde - Complete", "10120", 12]
     ],
+   719: [["Mega Diancie", "10075", 20]],
    720: [["Hoopa - Unbound", "10086", 10]],
    741: [
         ["Oricorio - Pom-Pom", "10123", 10],
@@ -457,6 +489,41 @@ const VARIANT_FORMS = {
         ["Necrozma - Ultra", "10157", 12]
     ],
    801: [["Magearna - Original Color", "10147", 10]],
+   809: [["Gigantamax Melmetal", "10208", 99]],
+   812: [["Gigantamax Rillaboom", "10209", 99]],
+   815: [["Gigantamax Cinderace", "10210", 99]],
+   818: [["Gigantamax Inteleon", "10211", 99]],
+   823: [["Gigantamax Corviknight", "10212", 99]],
+   826: [["Gigantamax Orbeetle", "10213", 99]],
+   834: [["Gigantamax Drednaw", "10214", 99]],
+   839: [["Gigantamax Coalossal", "10215", 99]],
+   841: [["Gigantamax Flapple", "10216", 99]],
+   842: [["Gigantamax Appletun", "10217", 99]],
+   844: [["Gigantamax Sandaconda", "10218", 99]],
+   845: [
+        ["Cramorant - Gulping Form", "10182", 10],
+        ["Cramorant - Gorging Form", "10183", 12]
+    ],
+   849: [
+        ["Toxtricity - Low Key", "10184", 10],
+        ["Gigantamax Toxtricity", "10219", 99]
+    ],
+   851: [["Gigantamax Centiskorch", "10220", 99]],
+   854: [["Sinistea - Antique Form", "854-antique", 10]],
+   855: [["Polteageist - Antique Form", "855-antique", 10]],
+   858: [["Gigantamax Hatterene", "10221", 99]],
+   861: [["Gigantamax Grimmsnarl", "10222", 99]],
+   869: [
+        ["Alcremie - Ruby Cream", "869-ruby-cream-strawberry-sweet", 10],
+        ["Alcremie - Matcha Cream", "869-matcha-cream-strawberry-sweet", 11],
+        ["Alcremie - Mint Cream", "869-mint-cream-strawberry-sweet", 12],
+        ["Alcremie - Lemon Cream", "869-lemon-cream-strawberry-sweet", 13],
+        ["Alcremie - Salted Cream", "869-salted-cream-strawberry-sweet", 14],
+        ["Alcremie - Ruby Swirl", "869-ruby-swirl-strawberry-sweet", 15],
+        ["Alcremie - Caramel Swirl", "869-caramel-swirl-strawberry-sweet", 16],
+        ["Alcremie - Rainbow Swirl", "869-rainbow-swirl-strawberry-sweet", 17],
+        ["Gigantamax Alcremie", "10223", 99]
+    ],
    875: [["Eiscue - Noice Face", "10185", 10]],
    876: [["Indeedee - Female", "10186", 10]],
    877: [["Morpeko - Hangry Mode", "10187", 10]],
@@ -487,8 +554,11 @@ const VARIANT_FORMS = {
     ],
    964: [["Palafin - Hero", "10256", 10]],
    978: [
-        ["Tatsugiri - Droopy", "10258", 10],
-        ["Tatsugiri - Stretchy", "10259", 10]
+        ["Mega Tatsugiri (Curly)", "mega-tatsugiri-curly", 10],
+        ["Tatsugiri - Droopy", "10258", 20],
+        ["Mega Tatsugiri (Droopy)", "mega-tatsugiri-droopy", 21],
+        ["Tatsugiri - Stretchy", "10259", 30],
+        ["Mega Tatsugiri (Stretchy)", "mega-tatsugiri-stretchy", 31]
     ],
    982: [["Dudunsparce - Three-Segment", "10255", 10]],
    999: [["Gimmighoul - Roaming", "10263", 10]],
@@ -496,12 +566,12 @@ const VARIANT_FORMS = {
   1013: [["Sinistcha - Masterpiece Form", "1013-masterpiece", 10]],
   1017: [
         ["Ogerpon - Wellspring Mask", "10273", 10],
-        ["Ogerpon - Tera Wellspring", "10279", 11],
+        ["Ogerpon - Tera Wellspring", "ogrepon-tera-wellspring", 11],
         ["Ogerpon - Hearthflame Mask", "10274", 20],
-        ["Ogerpon - Tera Hearthflame", "10280", 21],
+        ["Ogerpon - Tera Hearthflame", "ogrepon-tera-hearthflame", 21],
         ["Ogerpon - Cornerstone Mask", "10275", 30],
-        ["Ogerpon - Tera Cornerstone", "10281", 31],
-        ["Ogerpon - Tera Teal", "10278", 40]
+        ["Ogerpon - Tera Cornerstone", "ogrepon-tera-cornerstone", 31],
+        ["Ogerpon - Tera Teal", "ogrepon-tera-teal", 40]
     ],
   1024: [
         ["Terapagos - Terastal", "10276", 10],
