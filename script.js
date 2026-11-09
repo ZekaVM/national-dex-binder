@@ -256,7 +256,7 @@ const VARIANT_FORMS = {
         ["Unown - O", "201-o", 23],
         ["Unown - P", "201-p", 24],
         ["Unown - Q", "201-q", 25],
-        ["Unown - R", "201-r", 26],
+        ["Unown - R", "201-r", 26],@@
         ["Unown - S", "201-s", 27],
         ["Unown - T", "201-t", 28],
         ["Unown - U", "201-u", 29],
@@ -661,17 +661,7 @@ function generateData() {
             }
 
             // 2. Gather all forms together (Regional + Variant)
-            let allForms = [];Here I am sending the frames from the first batch of simulations that employed an ML model to choose the interatomic parameters! As you mentioned, there is a correlation between the hydrophobic tail parameters and the first scattering peak.
-
-I am starting new simulations using a new model too, to see which of them performs better to move forward with. Besides, more data points couldn't hurt us :p.
-
-Sometime around the end of the week, I will send you these other frames too!
-
-Thank you as always for your collaboration!
-
-With best regards,
-
-Jose
+            let allForms = [];
 
             if (REGIONAL_FORMS[dex]) {
                 REGIONAL_FORMS[dex].forEach(r => {
@@ -753,17 +743,7 @@ function getSlotColor(slot) {
 
 window.handleMissingSprite = function(img, pkmnName) {
     img.onerror = null; 
-    img.style.display = 'none'; Here I am sending the frames from the first batch of simulations that employed an ML model to choose the interatomic parameters! As you mentioned, there is a correlation between the hydrophobic tail parameters and the first scattering peak.
-
-I am starting new simulations using a new model too, to see which of them performs better to move forward with. Besides, more data points couldn't hurt us :p.
-
-Sometime around the end of the week, I will send you these other frames too!
-
-Thank you as always for your collaboration!
-
-With best regards,
-
-Jose
+    img.style.display = 'none';
     
     const placeholder = document.createElement('div');
     placeholder.className = 'missing-sprite';
