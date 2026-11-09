@@ -194,16 +194,16 @@ const VARIANT_FORMS = {
         ["Gigantamax Pikachu", "10199", 99]
     ],
     26: [
-        ["Mega Raichu X", "mega-raichu-x", 20],
-        ["Mega Raichu Y", "mega-raichu-y", 21]
+        ["Mega Raichu X", "10304", 2],
+        ["Mega Raichu Y", "10305", 3]
     ],
-    36: [["Mega Clefable", "mega-clefable", 20]],
+    36: [["Mega Clefable", "10278", 20]],
     44: [["Gloom - Female", "44-f", 10]],
     45: [["Vileplume - Female", "45-f", 10]],
     52: [["Gigantamax Meowth", "10200", 1]],
     65: [["Mega Alakazam", "10037", 20]],
     68: [["Gigantamax Machamp", "10201", 99]],
-    71: [["Mega Victreebel", "mega-victreebel", 20]],
+    71: [["Mega Victreebel", "10279", 20]],
     80: [["Mega Slowbro", "10071", 20]],
     84: [["Doduo - Female", "84-f", 10]],
     85: [["Dodrio - Female", "85-f", 10]],
@@ -213,7 +213,7 @@ const VARIANT_FORMS = {
     ],
     99: [["Gigantamax Kingler", "10203", 99]],
    115: [["Mega Kangaskhan", "10039", 20]],
-   121: [["Mega Starmie", "mega-starmie", 20]],
+   121: [["Mega Starmie", "10280", 20]],
    127: [["Mega Pinsir", "10040", 20]],
    129: [["Magikarp - Female", "129-f", 10]],
    130: [
@@ -227,13 +227,13 @@ const VARIANT_FORMS = {
     ],
    142: [["Mega Aerodactyl", "10042", 20]],
    143: [["Gigantamax Snorlax", "10206", 99]],
-   149: [["Mega Dragonite", "mega-dragonite", 20]],
+   149: [["Mega Dragonite", "10281", 20]],
    150: [
         ["Mega Mewtwo X", "10043", 20],
         ["Mega Mewtwo Y", "10044", 21]
     ],
-   154: [["Mega Meganium", "mega-meganium", 20]],
-   160: [["Mega Feraligatr", "mega-feraligatr", 20]],
+   154: [["Mega Meganium", "10282", 20]],
+   160: [["Mega Feraligatr", "10283", 20]],
    172: [["Spiky-eared Pichu", "172-spiky-eared", 10]],
    178: [["Xatu - Female", "178-f", 10]],
    181: [["Mega Ampharos", "10045", 20]],
@@ -276,7 +276,7 @@ const VARIANT_FORMS = {
         ["Heracross - Female", "214-f", 10],
         ["Mega Heracross", "10047", 20]
     ],
-   227: [["Mega Skarmory", "mega-skarmory", 20]],
+   227: [["Mega Skarmory", "10284", 20]],
    229: [["Mega Houndoom", "10048", 20]],
    248: [["Mega Tyranitar", "10049", 20]],
    254: [["Mega Sceptile", "10065", 20]],
@@ -298,10 +298,10 @@ const VARIANT_FORMS = {
         ["Castform - Snowy", "10015", 12]
     ],
    354: [["Mega Banette", "10056", 20]],
-   358: [["Mega Chimecho", "mega-chimecho", 20]],
+   358: [["Mega Chimecho", "10306", 20]],
    359: [
         ["Mega Absol", "10057", 20],
-        ["Mega Absol Z", "mega-absol-z", 21]
+        ["Mega Absol Z", "10307", 21]
     ],
    362: [["Mega Glalie", "10074", 20]],
    373: [["Mega Salamence", "10089", 20]],
@@ -316,7 +316,7 @@ const VARIANT_FORMS = {
         ["Deoxys - Defense", "10002", 11],
         ["Deoxys - Speed", "10003", 12]
     ],
-   398: [["Mega Staraptor", "mega-staraptor", 20]],
+   398: [["Mega Staraptor", "10308", 20]],
    412: [
         ["Burmy - Sandy", "412-sandy", 10],
         ["Burmy - Trash", "412-trash", 11]
@@ -332,17 +332,17 @@ const VARIANT_FORMS = {
    428: [["Mega Lopunny", "10088", 20]],
    445: [
         ["Mega Garchomp", "10058", 20],
-        ["Mega Garchomp Z", "mega-garchomp-z", 21]
+        ["Mega Garchomp Z", "10309", 21]
     ],
    448: [
         ["Mega Lucario", "10059", 20],
-        ["Mega Lucario Z", "mega-lucario-z", 21]
+        ["Mega Lucario Z", "10310", 21]
     ],
    449: [["Hippopotas - Female", "449-f", 10]],
    450: [["Hippowdon - Female", "450-f", 10]],
    460: [["Mega Abomasnow", "10060", 20]],
    475: [["Mega Gallade", "10068", 20]],
-   478: [["Mega Froslass", "mega-froslass", 20]],
+   478: [["Mega Froslass", "10285", 20]],
    479: [
         ["Rotom - Heat", "10008", 10],
         ["Rotom - Wash", "10009", 11],
@@ -356,9 +356,9 @@ const VARIANT_FORMS = {
     ],
    483: [["Dialga - Origin", "10245", 10]],
    484: [["Palkia - Origin", "10246", 10]],
-   485: [["Mega Heatran", "mega-heatran", 20]],
+   485: [["Mega Heatran", "10311", 20]],
    487: [["Giratina - Origin", "10007", 10]],
-   491: [["Mega Darkrai", "mega-darkrai", 20]],
+   491: [["Mega Darkrai", "10312", 20]],
    492: [["Shaymin - Sky", "10006", 10]],
    493: [
         ["Arceus - Grass", "493-grass", 10],
@@ -371,11 +371,11 @@ const VARIANT_FORMS = {
         ["Arceus - Steel", "493-steel", 17],
         ["Arceus - Dragon", "493-dragon", 18]
     ],
-   500: [["Mega Emboar", "mega-emboar", 20]],
+   500: [["Mega Emboar", "10324", 20]],
    521: [["Unfezant - Female", "521-f", 10]],
-   530: [["Mega Excadrill", "mega-excadrill", 20]],
+   530: [["Mega Excadrill", "10286", 20]],
    531: [["Mega Audino", "10069", 20]],
-   545: [["Mega Scolipede", "mega-scolipede", 20]],
+   545: [["Mega Scolipede", "10287", 20]],
    550: [
         ["Basculin - Blue-Striped", "10016", 10],
         ["Basculin - White-Striped", "10247", 11]
@@ -385,7 +385,7 @@ const VARIANT_FORMS = {
         ["Darmanitan - Galarian (Standard)", "10177", 11],
         ["Darmanitan - Galarian (Zen)", "10178", 12]
     ],
-   560: [["Mega Scrafty", "mega-scrafty", 20]],
+   560: [["Mega Scrafty", "10288", 20]],
    569: [["Gigantamax Garbodor", "10207", 99]],
    585: [
         ["Deerling - Summer", "585-summer", 10],
@@ -399,9 +399,9 @@ const VARIANT_FORMS = {
     ],
    592: [["Frillish - Female", "592-female", 10]],
    593: [["Jellicent - Female", "593-female", 10]],
-   604: [["Mega Eelektross", "mega-eelektross", 20]],
-   609: [["Mega Chandelure", "mega-chandelure", 20]],
-   623: [["Mega Golurk", "mega-golurk", 20]],
+   604: [["Mega Eelektross", "10289", 20]],
+   609: [["Mega Chandelure", "10290", 20]],
+   623: [["Mega Golurk", "10313", 20]],
    641: [["Tornadus - Therian", "10019", 10]],
    642: [["Thundurus - Therian", "10020", 10]],
    645: [["Landorus - Therian", "10021", 10]],
@@ -417,11 +417,11 @@ const VARIANT_FORMS = {
         ["Genesect - Burn Drive", "649-burn", 12],
         ["Genesect - Chill Drive", "649-chill", 13]
     ],
-   652: [["Mega Chesnaught", "mega-chesnaught", 20]],
-   655: [["Mega Delphox", "mega-delphox", 20]],
+   652: [["Mega Chesnaught", "10291", 20]],
+   655: [["Mega Delphox", "10292", 20]],
    658: [
         ["Greninja - Ash", "10117", 10],
-        ["Mega Greninja", "mega-greninja", 20]
+        ["Mega Greninja", "10293", 20]
     ],
    666: [
         ["Vivillon - Icy Snow", "666-icy-snow", 10],
@@ -445,8 +445,8 @@ const VARIANT_FORMS = {
         ["Vivillon - Poké Ball", "666-poke-ball", 28]
     ],
    668: [
-        ["Mega Pyroar", "mega-pyroar", 10],
-        ["Pyroar - Female", "668-female", 20]
+        ["Mega Pyroar", "10294", 2],
+        ["Pyroar - Female", "668-female", 10]
     ],
    669: [
         ["Flabébé - Yellow", "669-yellow", 10],
@@ -460,7 +460,7 @@ const VARIANT_FORMS = {
         ["Floette - Blue", "670-blue", 12],
         ["Floette - White", "670-white", 13],
         ["Floette - Eternal", "10061", 14],
-        ["Mega Eternal Floette", "mega-eternal-floette", 20]
+        ["Mega Eternal Floette", "10300", 20]
     ],
    671: [
         ["Florges - Yellow", "671-yellow", 10],
@@ -480,24 +480,24 @@ const VARIANT_FORMS = {
         ["Furfrou - Pharaoh Trim", "676-pharaoh", 18]
     ],
    678: [
-        ["Mega Meowstic", "mega-meowstic", 10],
-        ["Meowstic - Female", "10025", 20]
+        ["Mega Meowstic", "10323", 2],
+        ["Meowstic - Female", "10025", 10]
     ],
    681: [["Aegislash - Blade", "10026", 10]],
-   687: [["Mega Malamar", "mega-malamar", 20]],
-   689: [["Mega Barbaracle", "mega-barbaracle", 20]],
-   691: [["Mega Dragalge", "mega-dragalge", 20]],
-   701: [["Mega Hawlucha", "mega-hawlucha", 20]],
+   687: [["Mega Malamar", "10295", 20]],
+   689: [["Mega Barbaracle", "10296", 20]],
+   691: [["Mega Dragalge", "10297", 20]],
+   701: [["Mega Hawlucha", "10298", 20]],
    716: [["Xerneas - Active", "716-active", 10]],
    718: [
         ["Zygarde - 10%", "10118", 10],
         ["Zygarde - 50%", "718", 11],
         ["Zygarde - Complete", "10120", 12],
-        ["Mega Zygarde", "mega-zygarde", 20]
+        ["Mega Zygarde", "10299", 20]
     ],
    719: [["Mega Diancie", "10075", 20]],
    720: [["Hoopa - Unbound", "10086", 10]],
-   740: [["Mega Crabominable", "mega-crabominable", 20]],
+   740: [["Mega Crabominable", "10314", 20]],
    741: [
         ["Oricorio - Pom-Pom", "10123", 10],
         ["Oricorio - Pa'u", "10124", 10],
@@ -508,7 +508,7 @@ const VARIANT_FORMS = {
         ["Lycanroc - Dusk", "10152", 8]
     ],
    746: [["Wishiwashi - School", "10127", 10]],
-   768: [["Mega Golisopod", "mega-golisopod", 20]],
+   768: [["Mega Golisopod", "10315", 20]],
    774: [
         ["Minior - Red Core", "10136", 10],
         ["Minior - Orange Core", "10137", 10],
@@ -529,7 +529,7 @@ const VARIANT_FORMS = {
         ["Silvally - Steel", "773-steel", 17],
         ["Silvally - Dragon", "773-dragon", 18]
     ],
-   780: [["Mega Drampa", "mega-drampa", 20]],
+   780: [["Mega Drampa", "10301", 20]],
    800: [
         ["Necrozma - Dusk Mane", "10155", 10],
         ["Necrozma - Dawn Wings", "10156", 11],
@@ -537,10 +537,10 @@ const VARIANT_FORMS = {
     ],
    801: [
         ["Magearna - Original Color", "10147", 10],
-        ["Mega Magearna", "mega-magearna", 20],
-        ["Mega Magearna (Original Color)", "mega-magearna-original", 21]
+        ["Mega Magearna", "10302", 20],
+        ["Mega Magearna (Original Color)", "10316", 21]
     ],
-   807: [["Mega Zeraora", "mega-zeraora", 20]],
+   807: [["Mega Zeraora", "10317", 20]],
    809: [["Gigantamax Melmetal", "10208", 99]],
    812: [["Gigantamax Rillaboom", "10209", 99]],
    815: [["Gigantamax Cinderace", "10210", 99]],
@@ -576,7 +576,7 @@ const VARIANT_FORMS = {
         ["Alcremie - Rainbow Swirl", "869-rainbow-swirl-strawberry-sweet", 17],
         ["Gigantamax Alcremie", "10223", 99]
     ],
-   870: [["Mega Falinks", "mega-falinks", 20]],
+   870: [["Mega Falinks", "10303", 20]],
    875: [["Eiscue - Noice Face", "10185", 10]],
    876: [["Indeedee - Female", "10186", 10]],
    877: [["Morpeko - Hangry Mode", "10187", 10]],
@@ -605,29 +605,29 @@ const VARIANT_FORMS = {
         ["Squawkabilly - Yellow", "10261", 10],
         ["Squawkabilly - White", "10262", 10]
     ],
-   952: [["Mega Scovillain", "mega-scovillain", 20]],
+   952: [["Mega Scovillain", "10318", 20]],
    964: [["Palafin - Hero", "10256", 10]],
-   970: [["Mega Glimmora", "mega-glimmora", 20]],
+   970: [["Mega Glimmora", "10319", 20]],
    978: [
-        ["Mega Tatsugiri (Curly)", "mega-tatsugiri-curly", 10],
-        ["Tatsugiri - Droopy", "10258", 20],
-        ["Mega Tatsugiri (Droopy)", "mega-tatsugiri-droopy", 21],
-        ["Tatsugiri - Stretchy", "10259", 30],
-        ["Mega Tatsugiri (Stretchy)", "mega-tatsugiri-stretchy", 31]
+        ["Mega Tatsugiri (Curly)", "10320", 5],
+        ["Tatsugiri - Droopy", "10258", 10],
+        ["Mega Tatsugiri (Droopy)", "10321", 15],
+        ["Tatsugiri - Stretchy", "10259", 20],
+        ["Mega Tatsugiri (Stretchy)", "10322", 25]
     ],
    982: [["Dudunsparce - Three-Segment", "10255", 10]],
-   998: [["Mega Baxcalibur", "mega-baxcalibur", 20]],
+   998: [["Mega Baxcalibur", "10325", 20]],
    999: [["Gimmighoul - Roaming", "10263", 10]],
   1012: [["Poltchageist - Artisan Form", "1012-artisan", 10]],
   1013: [["Sinistcha - Masterpiece Form", "1013-masterpiece", 10]],
   1017: [
+        ["Ogerpon - Tera Teal", "ogrepon-tera-teal", 5],
         ["Ogerpon - Wellspring Mask", "10273", 10],
         ["Ogerpon - Tera Wellspring", "ogrepon-tera-wellspring", 11],
         ["Ogerpon - Hearthflame Mask", "10274", 20],
         ["Ogerpon - Tera Hearthflame", "ogrepon-tera-hearthflame", 21],
         ["Ogerpon - Cornerstone Mask", "10275", 30],
         ["Ogerpon - Tera Cornerstone", "ogrepon-tera-cornerstone", 31],
-        ["Ogerpon - Tera Teal", "ogrepon-tera-teal", 40]
     ],
   1024: [
         ["Terapagos - Terastal", "10276", 10],
@@ -661,7 +661,17 @@ function generateData() {
             }
 
             // 2. Gather all forms together (Regional + Variant)
-            let allForms = [];
+            let allForms = [];Here I am sending the frames from the first batch of simulations that employed an ML model to choose the interatomic parameters! As you mentioned, there is a correlation between the hydrophobic tail parameters and the first scattering peak.
+
+I am starting new simulations using a new model too, to see which of them performs better to move forward with. Besides, more data points couldn't hurt us :p.
+
+Sometime around the end of the week, I will send you these other frames too!
+
+Thank you as always for your collaboration!
+
+With best regards,
+
+Jose
 
             if (REGIONAL_FORMS[dex]) {
                 REGIONAL_FORMS[dex].forEach(r => {
@@ -743,7 +753,17 @@ function getSlotColor(slot) {
 
 window.handleMissingSprite = function(img, pkmnName) {
     img.onerror = null; 
-    img.style.display = 'none'; 
+    img.style.display = 'none'; Here I am sending the frames from the first batch of simulations that employed an ML model to choose the interatomic parameters! As you mentioned, there is a correlation between the hydrophobic tail parameters and the first scattering peak.
+
+I am starting new simulations using a new model too, to see which of them performs better to move forward with. Besides, more data points couldn't hurt us :p.
+
+Sometime around the end of the week, I will send you these other frames too!
+
+Thank you as always for your collaboration!
+
+With best regards,
+
+Jose
     
     const placeholder = document.createElement('div');
     placeholder.className = 'missing-sprite';
