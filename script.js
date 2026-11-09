@@ -256,7 +256,7 @@ const VARIANT_FORMS = {
         ["Unown - O", "201-o", 23],
         ["Unown - P", "201-p", 24],
         ["Unown - Q", "201-q", 25],
-        ["Unown - R", "201-r", 26],@@
+        ["Unown - R", "201-r", 26],
         ["Unown - S", "201-s", 27],
         ["Unown - T", "201-t", 28],
         ["Unown - U", "201-u", 29],
