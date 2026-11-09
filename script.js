@@ -621,13 +621,13 @@ const VARIANT_FORMS = {
   1012: [["Poltchageist - Artisan Form", "1012-artisan", 10]],
   1013: [["Sinistcha - Masterpiece Form", "1013-masterpiece", 10]],
   1017: [
-        ["Ogerpon - Tera Teal", "ogrepon-tera-teal", 5],
+        ["Ogerpon - Tera Teal", "tera-teal", 5],
         ["Ogerpon - Wellspring Mask", "10273", 10],
-        ["Ogerpon - Tera Wellspring", "ogrepon-tera-wellspring", 11],
+        ["Ogerpon - Tera Wellspring", "tera-wellspring", 11],
         ["Ogerpon - Hearthflame Mask", "10274", 20],
-        ["Ogerpon - Tera Hearthflame", "ogrepon-tera-hearthflame", 21],
+        ["Ogerpon - Tera Hearthflame", "tera-hearthflame", 21],
         ["Ogerpon - Cornerstone Mask", "10275", 30],
-        ["Ogerpon - Tera Cornerstone", "ogrepon-tera-cornerstone", 31],
+        ["Ogerpon - Tera Cornerstone", "tera-cornerstone", 31],
     ],
   1024: [
         ["Terapagos - Terastal", "10276", 10],
