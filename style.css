@@ -67,11 +67,15 @@ button, #import-btn {
 button:hover { background-color: #e0e0e0; }
 
 /* Table Styling */
-main { padding: 2rem; overflow-x: auto; }
+/* NOTE: no overflow here — an overflow ancestor would break position:sticky
+   on the thead and generation separators. The page itself scrolls instead. */
+main {
+    padding: 2rem;
+}
 #pokedex-table {
     width: 100%;
     /* Changed from collapse to separate so sticky headers keep borders */
-    border-collapse: separate; 
+    border-collapse: separate;
     border-spacing: 0;
     background: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -86,12 +90,17 @@ th, td {
 tr td:first-child, tr th:first-child { border-left: 1px solid #ddd; }
 tr:first-child th { border-top: 1px solid #ddd; }
 
+/* Let long Pokémon names wrap instead of widening the page on mobile */
+#pokedex-table td:nth-child(6) {
+    overflow-wrap: anywhere;
+}
+
 /* Sticky Table Header - Pinned below the main header */
 thead th {
     background-color: #eef2f7;
     position: sticky;
     top: var(--header-height, 0px); /* Uses JS calculated height */
-    z-index: 20; 
+    z-index: 20;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -147,20 +156,20 @@ td img {
 
 /* Responsive tweaks for Mobile */
 @media (max-width: 900px) {
-    header { 
-        flex-direction: column; 
-        text-align: center; 
+    header {
+        flex-direction: column;
+        text-align: center;
         padding: 0.75rem 0.5rem;
-        gap: 0.5rem; 
+        gap: 0.5rem;
     }
-    
-    header h1 { 
-        font-size: 1.2rem; 
+
+    header h1 {
+        font-size: 1.2rem;
         margin-bottom: 0.25rem;
     }
 
-    #filter-controls { 
-        justify-content: center; 
+    #filter-controls {
+        justify-content: center;
         width: 100%;
         gap: 0.4rem;
     }
@@ -195,17 +204,17 @@ td img {
         font-size: 0.85rem;
     }
 
-    main { 
-        padding: 0.5rem; 
+    main {
+        padding: 0.5rem;
     }
-    
-    th, td { 
-        padding: 0.4rem; 
-        font-size: 0.85rem; 
+
+    th, td {
+        padding: 0.4rem;
+        font-size: 0.85rem;
     }
-    
-    td img { 
-        width: 50px; 
-        height: 50px; 
+
+    td img {
+        width: 50px;
+        height: 50px;
     }
 }
