@@ -46,7 +46,7 @@ const REGIONAL_FORMS = {
     77: [["Ponyta", "Galarian", "10162", 2]],
     78: [["Rapidash", "Galarian", "10163", 2]],
     79: [["Slowpoke", "Galarian", "10164", 2]],
-    80: [["Slowbro", "Galarian", "10165", 2]],
+    80: [["Slowbro", "Galarian", "10165", 20]],
     83: [["Farfetch'd", "Galarian", "10166", 2]],
     88: [["Grimer", "Alolan", "10112", 1]],
     89: [["Muk", "Alolan", "10113", 1]],
@@ -204,7 +204,7 @@ const VARIANT_FORMS = {
     65: [["Mega Alakazam", "10037", 20]],
     68: [["Gigantamax Machamp", "10201", 99]],
     71: [["Mega Victreebel", "10279", 20]],
-    80: [["Mega Slowbro", "10071", 20]],
+    80: [["Mega Slowbro", "10071", 10]],
     84: [["Doduo - Female", "84-f", 10]],
     85: [["Dodrio - Female", "85-f", 10]],
     94: [
@@ -352,7 +352,8 @@ const VARIANT_FORMS = {
         ["Rotom - Dex", "rotom-dex", 15],
         ["Rotom - Phone", "rotom-phone", 16],
         ["Rotom - Bike", "rotom-bike", 17],
-        ["Rotom - Drone", "rotom-drone", 18]
+        ["Rotom - Drone", "rotom-drone", 18],
+        ["Rotomi" , "rotomi", 20]
     ],
    483: [["Dialga - Origin", "10245", 10]],
    484: [["Palkia - Origin", "10246", 10]],
@@ -607,6 +608,7 @@ const VARIANT_FORMS = {
     ],
    952: [["Mega Scovillain", "10320", 20]],
    964: [["Palafin - Hero", "10256", 10]],
+   966: [["Revavroom - Starmobile", "starmobile", 10]],
    970: [["Mega Glimmora", "10321", 20]],
    978: [
         ["Mega Tatsugiri (Curly)", "10322", 5],
