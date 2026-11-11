@@ -35,6 +35,30 @@ header {
 }
 header h1 { font-size: 1.5rem; }
 
+/* Header collapse toggle (mobile only - see media query) */
+#header-toggle {
+    display: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 101;
+    transition: background 0.15s;
+}
+#header-toggle:hover,
+#header-toggle:focus-visible {
+    background: rgba(255,255,255,0.3);
+    outline: none;
+}
+
 /* Filter Controls */
 #filter-controls {
     display: flex;
@@ -74,7 +98,6 @@ main {
 }
 #pokedex-table {
     width: 100%;
-    /* Changed from collapse to separate so sticky headers keep borders */
     border-collapse: separate;
     border-spacing: 0;
     background: white;
@@ -99,12 +122,11 @@ tr:first-child th { border-top: 1px solid #ddd; }
 thead th {
     background-color: #eef2f7;
     position: sticky;
-    top: var(--header-height, 0px); /* Uses JS calculated height */
+    top: var(--header-height, 0px);
     z-index: 20;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Removed alternating row colors so the slot gradient pops */
 tbody tr:hover { background-color: #f0f4f9; }
 
 /* Sticky Generation Separator - Pinned below the main header + table header */
@@ -166,6 +188,26 @@ td img {
     header h1 {
         font-size: 1.2rem;
         margin-bottom: 0.25rem;
+        padding-right: 3.5rem; /* room for the toggle button on the right */
+    }
+
+    /* Show the toggle only on mobile */
+    #header-toggle {
+        display: block;
+    }
+
+    /* Collapsed state: keep title + toggle, hide everything else */
+    header.collapsed {
+        padding: 0.4rem 0.5rem;
+    }
+    header.collapsed h1 {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    header.collapsed #filter-controls,
+    header.collapsed #progress-container,
+    header.collapsed #controls {
+        display: none;
     }
 
     #filter-controls {
