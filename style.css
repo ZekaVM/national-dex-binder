@@ -26,7 +26,7 @@ header {
     color: white;
     padding: 1rem 2rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    z-index: 100;
+    z-index: 100; /* Stays on top of everything */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -70,7 +70,8 @@ button:hover { background-color: #e0e0e0; }
 main { padding: 2rem; overflow-x: auto; }
 #pokedex-table {
     width: 100%;
-    border-collapse: separate; /* Changed from collapse to fix sticky borders */
+    /* Changed from collapse to separate so sticky headers keep borders */
+    border-collapse: separate; 
     border-spacing: 0;
     background: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -79,25 +80,25 @@ th, td {
     padding: 0.75rem;
     text-align: center;
     border: 1px solid #ddd;
-    border-top: none; /* Prevents double borders */
+    border-top: none;
     border-left: none;
 }
 tr td:first-child, tr th:first-child { border-left: 1px solid #ddd; }
 tr:first-child th { border-top: 1px solid #ddd; }
 
-/* Sticky Table Header */
+/* Sticky Table Header - Pinned below the main header */
 thead th {
     background-color: #eef2f7;
     position: sticky;
-    top: var(--header-height, 80px); /* Dynamic offset set by JS */
-    z-index: 20;
+    top: var(--header-height, 0px); /* Uses JS calculated height */
+    z-index: 20; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Removed alternating row colors so the slot gradient pops */
 tbody tr:hover { background-color: #f0f4f9; }
 
-/* Sticky Generation Separator */
+/* Sticky Generation Separator - Pinned below the main header + table header */
 .gen-separator td {
     background-color: #808080 !important;
     color: white;
@@ -106,7 +107,7 @@ tbody tr:hover { background-color: #f0f4f9; }
     text-align: center;
     letter-spacing: 1px;
     position: sticky;
-    top: calc(var(--header-height, 80px) + var(--thead-height, 45px)); /* Offsets below main header + table header */
+    top: calc(var(--header-height, 0px) + var(--thead-height, 0px));
     z-index: 15;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     border: none;
@@ -115,7 +116,7 @@ tbody tr:hover { background-color: #f0f4f9; }
 
 /* Sprite column (Bigger Sprites) */
 td img {
-    width: 80px;https://zekavm.github.io/national-dex-binder/
+    width: 80px;
     height: 80px;
     object-fit: contain;
     image-rendering: pixelated;
