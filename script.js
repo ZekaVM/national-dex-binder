@@ -657,12 +657,10 @@ function generateData() {
         gen.names.forEach((baseName, i) => {
             const dex = gen.dex_start + i;
 
-            // 1. Add Base Form
             if (![201, 716, 718].includes(dex)) {
                 addRow(dex, BASE_FORM_NAMES[dex] || baseName, dex.toString(), genId);
             }
 
-            // 2. Gather all forms together (Regional + Variant)
             let allForms = [];
 
             if (REGIONAL_FORMS[dex]) {
@@ -685,10 +683,7 @@ function generateData() {
                 });
             }
 
-            // 3. Sort all forms by priority
             allForms.sort((a, b) => a.priority - b.priority);
-
-            // 4. Add them to the row data
             allForms.forEach(f => addRow(dex, f.name, f.slug, genId));
         });
     });
@@ -733,7 +728,6 @@ const warningBanner = document.getElementById('warning-banner');
 const missingListDisplay = document.getElementById('missing-list');
 const missingSpritesSet = new Set();
 
-// Slot Color Gradient (Green to Red)
 function getSlotColor(slot) {
     if (slot < 1 || slot > PER_PAGE) return 'transparent';
     const t = (slot - 1) / (PER_PAGE - 1);
@@ -771,19 +765,15 @@ function renderTable() {
     const selectedStatus = statusFilter.value;
     const sortOrder = sortFilter.value;
 
-    // 1. Filter Data
     let processedData = POKEMON_DATA.filter(pkmn => {
-        // Gen Filter
         if (selectedGen !== 'all' && pkmn.gen !== parseInt(selectedGen)) return false;
 
-        // Search Filter
         if (term) {
             const matchesName = pkmn.name.toLowerCase().includes(term);
             const matchesDex = pkmn.dex.toString().includes(term);
             if (!matchesName && !matchesDex) return false;
         }
 
-        // Status Filter
         if (selectedStatus !== 'all') {
             const uniqueKey = `pkmn_${pkmn.dex}_${pkmn.slug}`;
             const isChecked = localStorage.getItem(uniqueKey) === 'true';
@@ -794,8 +784,6 @@ function renderTable() {
         return true;
     });
 
-    // 2. Sort Data
-    // We sort by Dex first, and then by the original Card Number to preserve the Base -> Regional -> Variant order!
     processedData.sort((a, b) => {
         if (sortOrder === 'desc') {
             return b.dex - a.dex || b.card - a.card; 
@@ -804,12 +792,10 @@ function renderTable() {
         }
     });
 
-    // 3. Render to DOM
     tbody.innerHTML = '';
     let lastGen = null;
     
     processedData.forEach((pkmn) => {
-        // Insert Generation Header dynamically when gen changes
         if (pkmn.gen !== lastGen) {
             const trSep = document.createElement('tr');
             trSep.className = 'gen-separator';
@@ -839,7 +825,7 @@ function renderTable() {
     });
     
     loadProgress(); 
-    updateStickyOffsets(); // <--- ADDED: Recalculate sticky positions after rendering
+    updateStickyOffsets();
 }
 
 // ============================================================
@@ -937,31 +923,54 @@ statusFilter.addEventListener('change', renderTable);
 sortFilter.addEventListener('change', renderTable);
 
 // ============================================================
-// 7. STICKY HEADER CALCULATION (NEW)
+// 7. STICKY HEADER CALCULATION
 // ============================================================
 function updateStickyOffsets() {
     const header = document.querySelector('header');
     const thead = document.querySelector('thead');
     
     if (header && thead) {
-        // Get actual heights
         const headerHeight = header.offsetHeight;
         const theadHeight = thead.offsetHeight;
         
-        // Pass to CSS variables
         document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
         document.documentElement.style.setProperty('--thead-height', `${theadHeight}px`);
     }
 }
 
-// Listen for window resizes (e.g., rotating phone, resizing browser)
 window.addEventListener('resize', updateStickyOffsets);
 
-// Use a ResizeObserver to catch the header changing height dynamically (e.g., if filters wrap to 2 lines on mobile)
 const resizeObserver = new ResizeObserver(() => {
     updateStickyOffsets();
 });
 resizeObserver.observe(document.querySelector('header'));
+
+// ============================================================
+// 7b. MOBILE HEADER TOGGLE  (NEW)
+// ============================================================
+(function setupHeaderToggle() {
+    const headerToggle = document.getElementById('header-toggle');
+    const mainHeader   = document.querySelector('header');
+    if (!headerToggle || !mainHeader) return;
+
+    function applyState(collapsed) {
+        mainHeader.classList.toggle('collapsed', collapsed);
+        headerToggle.textContent = collapsed ? '▼' : '▲';
+        headerToggle.setAttribute('aria-expanded', String(!collapsed));
+    }
+
+    // Restore previous preference (only relevant on mobile — CSS ignores it on desktop)
+    const saved = localStorage.getItem('header_collapsed') === 'true';
+    applyState(saved);
+
+    headerToggle.addEventListener('click', () => {
+        const nowCollapsed = !mainHeader.classList.contains('collapsed');
+        applyState(nowCollapsed);
+        localStorage.setItem('header_collapsed', String(nowCollapsed));
+        // Nudge the sticky positions in case the ResizeObserver hasn't fired yet
+        updateStickyOffsets();
+    });
+})();
 
 // ============================================================
 // 8. INITIALIZE
