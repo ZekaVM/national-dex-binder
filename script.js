@@ -839,6 +839,7 @@ function renderTable() {
     });
     
     loadProgress(); 
+    updateStickyOffsets(); // <--- ADDED: Recalculate sticky positions after rendering
 }
 
 // ============================================================
@@ -936,6 +937,33 @@ statusFilter.addEventListener('change', renderTable);
 sortFilter.addEventListener('change', renderTable);
 
 // ============================================================
-// 7. INITIALIZE
+// 7. STICKY HEADER CALCULATION (NEW)
+// ============================================================
+function updateStickyOffsets() {
+    const header = document.querySelector('header');
+    const thead = document.querySelector('thead');
+    
+    if (header && thead) {
+        // Get actual heights
+        const headerHeight = header.offsetHeight;
+        const theadHeight = thead.offsetHeight;
+        
+        // Pass to CSS variables
+        document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+        document.documentElement.style.setProperty('--thead-height', `${theadHeight}px`);
+    }
+}
+
+// Listen for window resizes (e.g., rotating phone, resizing browser)
+window.addEventListener('resize', updateStickyOffsets);
+
+// Use a ResizeObserver to catch the header changing height dynamically (e.g., if filters wrap to 2 lines on mobile)
+const resizeObserver = new ResizeObserver(() => {
+    updateStickyOffsets();
+});
+resizeObserver.observe(document.querySelector('header'));
+
+// ============================================================
+// 8. INITIALIZE
 // ============================================================
 renderTable();
