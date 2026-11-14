@@ -489,7 +489,10 @@ const VARIANT_FORMS = {
    689: [["Mega Barbaracle", "10298", 20]],
    691: [["Mega Dragalge", "10299", 20]],
    701: [["Mega Hawlucha", "10300", 20]],
-   716: [["Xerneas - Active", "716-active", 10]],
+   716: [
+        ["Xerneas - Active Mode", "716-active", 10],
+        ["Xerneas - Neutral Mode", "716-neutral", 5],
+    ],
    718: [
         ["Zygarde - 10%", "10118", 10],
         ["Zygarde - 50%", "718", 11],
