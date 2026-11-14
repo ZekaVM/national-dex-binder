@@ -494,6 +494,7 @@ const VARIANT_FORMS = {
         ["Xerneas - Neutral Mode", "716-neutral", 5],
     ],
    718: [
+        ["Zygarde Core", "718-core", 5],
         ["Zygarde - 10%", "10118", 10],
         ["Zygarde - 50%", "718", 11],
         ["Zygarde - Complete", "10120", 12],
