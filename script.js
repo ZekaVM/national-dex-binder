@@ -545,6 +545,7 @@ const VARIANT_FORMS = {
         ["Mega Magearna", "10317", 10],
         ["Mega Magearna (Original Color)", "10318", 21]
     ],
+   802: [["Zenith Marshadow", "802-z", 20]],
    807: [["Mega Zeraora", "10319", 20]],
    809: [["Gigantamax Melmetal", "10208", 99]],
    812: [["Gigantamax Rillaboom", "10209", 99]],
